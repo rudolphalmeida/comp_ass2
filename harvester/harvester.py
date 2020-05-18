@@ -1,3 +1,5 @@
+import sys
+
 import tweepy
 from tweepy.streaming import StreamListener
 
@@ -14,7 +16,8 @@ class ToFileListener(StreamListener):
         super().__init__(api=api)
 
     def on_data(self, raw_data):
-        print(raw_data)
+        if not self.file == sys.stdout:
+            print(raw_data)
         print(raw_data, file=self.file)
         return True
 
@@ -36,12 +39,9 @@ class CouchDBListener(StreamListener):
 
 
 if __name__ == "__main__":
-    auth = tweepy.OAuthHandler(credentials.RUD_CONS_KEY, credentials.RUD_CONS_SECRET)
-    auth.set_access_token(
-        credentials.RUD_TOKEN, credentials.RUD_TOKEN_SECRET,
-    )
+    auth = credentials.authenticate("RUD")
 
-    listener = ToFileListener(open("tweets.json", "w"))
+    listener = ToFileListener(sys.stdout)
     stream = tweepy.Stream(auth, listener)
 
     stream.filter(track=["#MasterChefAU"])
