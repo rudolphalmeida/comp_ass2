@@ -1,9 +1,6 @@
 import sys
 
-import tweepy
 from tweepy.streaming import StreamListener
-
-import credentials
 
 
 class ToFileListener(StreamListener):
@@ -36,12 +33,3 @@ class CouchDBListener(StreamListener):
 
     def on_error(self, status_code):
         return super().on_error(status_code)
-
-
-if __name__ == "__main__":
-    auth = credentials.authenticate("RUD")
-
-    listener = ToFileListener(sys.stdout)
-    stream = tweepy.Stream(auth, listener)
-
-    stream.filter(track=["#MasterChefAU"])
