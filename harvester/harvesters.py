@@ -36,3 +36,7 @@ class TwitterStreamer:
     def stream(self, listener, **filter_args):
         tweet_stream = Stream(self.auth, listener)
         tweet_stream.filter(**filter_args)
+
+    def async_stream(self, listener, **filter_args):
+        tweet_stream = Stream(self.auth, listener)
+        tweet_stream.filter(**filter_args, is_async=True)

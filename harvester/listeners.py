@@ -1,5 +1,3 @@
-import sys
-
 from tweepy.streaming import StreamListener
 
 
@@ -13,13 +11,13 @@ class ToFileListener(StreamListener):
         super().__init__(api=api)
 
     def on_data(self, raw_data):
-        if not self.file == sys.stdout:
-            print(raw_data)
         print(raw_data, file=self.file)
         return True
 
     def on_error(self, status_code):
-        print(status_code)
+        if status_code == 420:  # Rate limit reached
+            # Disconnect the stream
+            return False
 
 
 class CouchDBListener(StreamListener):
@@ -32,4 +30,6 @@ class CouchDBListener(StreamListener):
         return super().on_data(raw_data)
 
     def on_error(self, status_code):
-        return super().on_error(status_code)
+        if status_code == 420:  # Rate limit reached
+            # Disconnect the stream
+            return False
