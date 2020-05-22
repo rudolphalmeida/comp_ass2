@@ -30,13 +30,15 @@ class TwitterStreamer:
     Class to stream the latest tweets on some particular topic
     """
 
-    def __init__(self, auth_name):
+    def __init__(self, auth_name, track, locations):
         self.auth = credentials.authenticate(auth_name)
+        self.track = track
+        self.locations = locations
 
-    def stream(self, listener, **filter_args):
+    def stream(self, listener):
         tweet_stream = Stream(self.auth, listener)
-        tweet_stream.filter(**filter_args)
+        tweet_stream.filter(track=self.track, locations=self.locations)
 
-    def async_stream(self, listener, **filter_args):
+    def async_stream(self, listener):
         tweet_stream = Stream(self.auth, listener)
-        tweet_stream.filter(**filter_args, is_async=True)
+        tweet_stream.filter(track=self.track, locations=self.locations, is_async=True)

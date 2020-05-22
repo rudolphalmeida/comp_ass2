@@ -9,9 +9,8 @@ GROUP_MEMBERS = ["RUD", "SAG", "SHE", "VIS", "SHA"]
 
 
 for member in GROUP_MEMBERS:
-    streamer = TwitterStreamer(member)
-    streamer.stream(
-        ToFileListener(sys.stdout),
+    streamer = TwitterStreamer(
+        member,
         track=[
             "#MasterChefAU",
             "#masterchefaustralia",
@@ -21,6 +20,17 @@ for member in GROUP_MEMBERS:
             "#tastingaustralia",
             "#masterchef2020",
             "#season12",
+            "@RoseAdamCooks",
+            "@sarahclarecooks",
+            "@S_Tiong",
+            "@SimonToohey",
+            "@TessaBoersma",
+            "@trackycollins_",
+            "@harry_fos",
+            "@hayden_quinn",
+            "@jesselemon",
+            "@khanhong",
         ],
         locations=AUS_GEO_RANGE,
     )
+    streamer.stream(ToFileListener(sys.stdout))
