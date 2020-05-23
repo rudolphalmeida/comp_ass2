@@ -11,6 +11,8 @@ GROUP_MEMBERS = ["RUD", "SAG", "SHE", "VIS", "SHA"]
 for member in GROUP_MEMBERS:
     streamer = TwitterStreamer(
         member,
+        # Hashtags and usernames to track
+        # FIXME: This is not honoured
         track=[
             "#MasterChefAU",
             "#masterchefaustralia",
