@@ -18,7 +18,7 @@ class ToFileListener(StreamListener):
         super().__init__(api=api)
 
     def on_data(self, raw_data):
-        print(raw_data, file=self.file)
+        print(raw_data, file=self.file, end=",")
         return True
 
     def on_error(self, status_code):
@@ -78,8 +78,11 @@ if __name__ == "__main__":
         "@jesselemon",
         "@khanhong",
     ]
+
+    track = ["@DanielAndrewsMP"]
+
     stream_tweets(
         auth=credentials.authenticate("RUD"),
-        listener=ToFileListener(sys.stdout),
+        listener=CouchDBListener("http://admin:password@172.26.129.164:5984/"),
         track=track,
     )
