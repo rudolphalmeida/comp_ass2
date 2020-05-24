@@ -1,6 +1,8 @@
 from tweepy.streaming import StreamListener
 import couchdb
 
+import json
+
 
 class ToFileListener(StreamListener):
     """
@@ -36,7 +38,7 @@ class CouchDBListener(StreamListener):
         super().__init__(api=api)
 
     def on_data(self, raw_data):
-        self.db.save(raw_data)
+        self.db.save(json.loads(raw_data))
 
     def on_error(self, status_code):
         if status_code == 420:  # Rate limit reached
