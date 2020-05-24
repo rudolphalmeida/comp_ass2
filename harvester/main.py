@@ -57,8 +57,6 @@ def stream_tweets(auth, listener, track):
 
 if __name__ == "__main__":
     # AUS_GEO_RANGE = [112, -44, 155, -10]
-
-    # Authenticate using config.py and connect to Twitter Streaming API.
     track = [
         "#MasterChefAU",
         "#masterchefaustralia",
@@ -81,8 +79,9 @@ if __name__ == "__main__":
 
     track = ["@DanielAndrewsMP"]
 
-    stream_tweets(
-        auth=credentials.authenticate("RUD"),
-        listener=CouchDBListener("http://admin:password@172.26.129.164:5984/"),
-        track=track,
-    )
+    for user in ["RUD", "SAG"]:
+        stream_tweets(
+            auth=credentials.authenticate(user),
+            listener=ToFileListener(open("tweets.json", "a")),
+            track=track,
+        )
