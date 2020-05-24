@@ -1,4 +1,5 @@
 from tweepy.streaming import StreamListener
+import couchdb
 
 
 class ToFileListener(StreamListener):
@@ -26,8 +27,16 @@ class CouchDBListener(StreamListener):
     stores them to the configured CouchDB instance
     """
 
+    def __init__(self, server_id, api=None):
+        couch = couchdb.Server(server_id)
+        try:
+            self.db = couch.create("tweets")
+        except Exception:
+            self.db = couch["tweets"]  # Table is created
+        super().__init__(api=api)
+
     def on_data(self, raw_data):
-        return super().on_data(raw_data)
+        self.db.save(raw_data)
 
     def on_error(self, status_code):
         if status_code == 420:  # Rate limit reached

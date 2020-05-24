@@ -13,26 +13,29 @@ for member in GROUP_MEMBERS:
         member,
         # Hashtags and usernames to track
         # FIXME: This is not honoured
-        track=[
-            "#MasterChefAU",
-            "#masterchefaustralia",
-            "#masterchef",
-            "#Chef",
-            "#SimonTohey",
-            "#tastingaustralia",
-            "#masterchef2020",
-            "#season12",
-            "@RoseAdamCooks",
-            "@sarahclarecooks",
-            "@S_Tiong",
-            "@SimonToohey",
-            "@TessaBoersma",
-            "@trackycollins_",
-            "@harry_fos",
-            "@hayden_quinn",
-            "@jesselemon",
-            "@khanhong",
-        ],
+        # track=[
+        #     "MasterChefAU",
+        #     "masterchefaustralia",
+        #     "masterchef",
+        #     "SimonTohey",
+        #     "tastingaustralia",
+        #     "masterchef2020",
+        #     "season12",
+        #     "RoseAdamCooks",
+        #     "sarahclarecooks",
+        #     "S_Tiong",
+        #     "SimonToohey",
+        #     "TessaBoersma",
+        #     "trackycollins_",
+        #     "harry_fos",
+        #     "hayden_quinn",
+        #     "jesselemon",
+        #     "khanhong",
+        # ],
+        track=["trump"],
         locations=AUS_GEO_RANGE,
     )
-    streamer.stream(ToFileListener(sys.stdout))
+    try:
+        streamer.stream(ToFileListener(sys.stdout))
+    except KeyboardInterrupt:
+        print("Shutting down...")

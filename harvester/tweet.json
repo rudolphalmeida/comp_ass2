@@ -1,50 +1,54 @@
 {
-    "created_at": "Thu May 21 23:54:10 +0000 2020",
-    "id": 1263619122627137537,
-    "id_str": "1263619122627137537",
-    "text": "Too many people on Tinder are married or already in relationships, and many hide the fact they have kids \ud83e\udd25",
+    "created_at": "Sun May 24 05:42:27 +0000 2020",
+    "id": 1264431547920216064,
+    "id_str": "1264431547920216064",
+    "text": "@ManjitK6987 Nawww the doggo \ud83d\udc94",
+    "display_text_range": [
+        13,
+        30
+    ],
     "source": "\u003ca href=\"http:\/\/twitter.com\/download\/iphone\" rel=\"nofollow\"\u003eTwitter for iPhone\u003c\/a\u003e",
     "truncated": false,
-    "in_reply_to_status_id": null,
-    "in_reply_to_status_id_str": null,
-    "in_reply_to_user_id": null,
-    "in_reply_to_user_id_str": null,
-    "in_reply_to_screen_name": null,
+    "in_reply_to_status_id": 1264314667393900544,
+    "in_reply_to_status_id_str": "1264314667393900544",
+    "in_reply_to_user_id": 775918317764644864,
+    "in_reply_to_user_id_str": "775918317764644864",
+    "in_reply_to_screen_name": "ManjitK6987",
     "user": {
-        "id": 98981387,
-        "id_str": "98981387",
-        "name": "Love Muffin",
-        "screen_name": "mango_mamasita",
-        "location": "Australia",
-        "url": "http:\/\/www.instagram.com\/lovemuffin_if_ya_nasty",
-        "description": "\ud83d\udccdTerritorian \ud83d\udc0a\ud83e\udd6d\ud83c\udf34         \ud83d\udc69\ud83c\udffd\u200d\ud83e\uddb1 Single  \ud83d\udc85\ud83c\udffd\ud83d\udc84\ud83d\udc8b              \u2708\ufe0f Traveller \ud83e\uddf3 \ud83c\udfd6\ud83d\uddfa                 \ud83d\udc69\ud83c\udffd\u200d\ud83c\udf93 Criminology\ud83d\udd75\ud83c\udffd\u200d\u2640\ufe0f\ud83d\udd2c\ud83e\uddec      \ud83d\udccf 6\u20191 \ud83e\uddd8\ud83c\udffd\u200d\u2640\ufe0f\ud83d\udc60\ud83c\udf38",
+        "id": 196117757,
+        "id_str": "196117757",
+        "name": "\u20bd\u1dc0\u1dc1\u1dc7\u1dc8\u20ac\u1dc2\u1dc9\u1dc3\u1dca\u1dc4\u1dcd\u1dfe\u1dc6\u1dff\u20ae\ufe20\ufe21\ufe22\ufe23\ufe24\ufe25\ufe26\u20ac\u1dc7\u0313\u1dc2\u0329\u033c\u032b\u20b9\u20d6\u20dc\u20d5\u20db\u20d4\u20e1\u20da\u20d3\u20b2\u034a\u033b\u0349\u0325\u033d\ud83d\ude37",
+        "screen_name": "p_terg",
+        "location": "Toogagal\/Dharug land",
+        "url": "http:\/\/about.me\/peterg.gleeson",
+        "description": "@gargy_gleeson's husband; Musician; Proud Father \u26a0\ufe0fColourful Content\u26a0\ufe0f \ud835\ude48\ud835\ude6e Opinion; BA (Macq), GDIMLS (CUT) #BoundByBlue since 2003 #CANCERFREE since 9Apr11",
         "translator_type": "none",
         "protected": false,
         "verified": false,
-        "followers_count": 746,
-        "friends_count": 1227,
-        "listed_count": 4,
-        "favourites_count": 1841,
-        "statuses_count": 7843,
-        "created_at": "Wed Dec 23 23:23:52 +0000 2009",
+        "followers_count": 1373,
+        "friends_count": 1455,
+        "listed_count": 53,
+        "favourites_count": 43937,
+        "statuses_count": 86206,
+        "created_at": "Tue Sep 28 11:24:02 +0000 2010",
         "utc_offset": null,
         "time_zone": null,
         "geo_enabled": true,
         "lang": null,
         "contributors_enabled": false,
         "is_translator": false,
-        "profile_background_color": "000000",
+        "profile_background_color": "FFFFFF",
         "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
         "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
         "profile_background_tile": false,
-        "profile_link_color": "981CEB",
-        "profile_sidebar_border_color": "000000",
-        "profile_sidebar_fill_color": "000000",
-        "profile_text_color": "000000",
-        "profile_use_background_image": false,
-        "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1263234331440328704\/GPV4Fmml_normal.jpg",
-        "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1263234331440328704\/GPV4Fmml_normal.jpg",
-        "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/98981387\/1533052870",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "DDFFCD",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1229291426229280775\/M8CHmH5h_normal.jpg",
+        "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1229291426229280775\/M8CHmH5h_normal.jpg",
+        "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/196117757\/1463797449",
         "default_profile": false,
         "default_profile_image": false,
         "following": null,
@@ -54,11 +58,11 @@
     "geo": null,
     "coordinates": null,
     "place": {
-        "id": "002891d33ed032d3",
-        "url": "https:\/\/api.twitter.com\/1.1\/geo\/id\/002891d33ed032d3.json",
+        "id": "0073b76548e5984f",
+        "url": "https:\/\/api.twitter.com\/1.1\/geo\/id\/0073b76548e5984f.json",
         "place_type": "city",
-        "name": "Darwin",
-        "full_name": "Darwin, Northern Territory",
+        "name": "Sydney",
+        "full_name": "Sydney, New South Wales",
         "country_code": "AU",
         "country": "Australia",
         "bounding_box": {
@@ -66,20 +70,20 @@
             "coordinates": [
                 [
                     [
-                        130.815117,
-                        -12.521742
+                        150.520929,
+                        -34.118347
                     ],
                     [
-                        130.815117,
-                        -12.330060
+                        150.520929,
+                        -33.578141
                     ],
                     [
-                        131.051500,
-                        -12.330060
+                        151.343021,
+                        -33.578141
                     ],
                     [
-                        131.051500,
-                        -12.521742
+                        151.343021,
+                        -34.118347
                     ]
                 ]
             ]
@@ -95,12 +99,23 @@
     "entities": {
         "hashtags": [],
         "urls": [],
-        "user_mentions": [],
+        "user_mentions": [
+            {
+                "screen_name": "ManjitK6987",
+                "name": "\ud83d\udca7\ud83c\udf80 Manjit Kaur",
+                "id": 775918317764644864,
+                "id_str": "775918317764644864",
+                "indices": [
+                    0,
+                    12
+                ]
+            }
+        ],
         "symbols": []
     },
     "favorited": false,
     "retweeted": false,
     "filter_level": "low",
     "lang": "en",
-    "timestamp_ms": "1590105250399"
+    "timestamp_ms": "1590298947683"
 }
