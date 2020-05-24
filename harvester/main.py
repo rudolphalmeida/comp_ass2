@@ -1,7 +1,7 @@
 import sys
 
 from harvesters import TwitterStreamer
-from listeners import ToFileListener
+from listeners import CouchDBListener
 
 
 AUS_GEO_RANGE = [112, -44, 155, -10]
@@ -36,6 +36,6 @@ for member in GROUP_MEMBERS:
         locations=AUS_GEO_RANGE,
     )
     try:
-        streamer.stream(ToFileListener(sys.stdout))
+        streamer.stream(CouchDBListener("http://admin:password@127.0.0.1:5984/"))
     except KeyboardInterrupt:
         print("Shutting down...")
