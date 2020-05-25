@@ -1,0 +1,42 @@
+INFO:root:scraping 10 tweets until 2020-05-25
+DEBUG:tweepy.binder:PARAMS: {'q': b"['@DanielAndrews']", 'count': b'10', 'until': b'2020-05-25'}
+DEBUG:requests_oauthlib.oauth1_auth:Signing request <PreparedRequest [GET]> using client <Client client_key=n4IgjuZTLvAa9WXpJx7W0skch, client_secret=****, resource_owner_key=1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
+DEBUG:requests_oauthlib.oauth1_auth:Including body in call to sign: False
+DEBUG:oauthlib.oauth1.rfc5849:Collected params: [('q', "['@DanielAndrews']"), ('count', '10'), ('until', '2020-05-25'), ('oauth_nonce', '42782017384085669081590367896'), ('oauth_timestamp', '1590367896'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'n4IgjuZTLvAa9WXpJx7W0skch'), ('oauth_token', '1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf')]
+DEBUG:oauthlib.oauth1.rfc5849:Normalized params: count=10&oauth_consumer_key=n4IgjuZTLvAa9WXpJx7W0skch&oauth_nonce=42782017384085669081590367896&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1590367896&oauth_token=1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf&oauth_version=1.0&q=%5B%27%40DanielAndrews%27%5D&until=2020-05-25
+DEBUG:oauthlib.oauth1.rfc5849:Normalized URI: https://api.twitter.com/1.1/search/tweets.json
+DEBUG:oauthlib.oauth1.rfc5849:Signing: signature base string: GET&https%3A%2F%2Fapi.twitter.com%2F1.1%2Fsearch%2Ftweets.json&count%3D10%26oauth_consumer_key%3Dn4IgjuZTLvAa9WXpJx7W0skch%26oauth_nonce%3D42782017384085669081590367896%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1590367896%26oauth_token%3D1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf%26oauth_version%3D1.0%26q%3D%255B%2527%2540DanielAndrews%2527%255D%26until%3D2020-05-25
+DEBUG:oauthlib.oauth1.rfc5849:Signature: 3YVRkYH1vkQbMxHvawD5SXXJOYw=
+DEBUG:requests_oauthlib.oauth1_auth:Updated url: https://api.twitter.com/1.1/search/tweets.json?q=%5B%27%40DanielAndrews%27%5D&count=10&until=2020-05-25
+DEBUG:requests_oauthlib.oauth1_auth:Updated headers: {'Host': 'api.twitter.com', 'Authorization': 'OAuth oauth_nonce="42782017384085669081590367896", oauth_timestamp="1590367896", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="n4IgjuZTLvAa9WXpJx7W0skch", oauth_token="1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf", oauth_signature="3YVRkYH1vkQbMxHvawD5SXXJOYw%3D"'}
+DEBUG:requests_oauthlib.oauth1_auth:Updated body: None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.twitter.com:443
+DEBUG:urllib3.connectionpool:https://api.twitter.com:443 "GET /1.1/search/tweets.json?q=%5B%27%40DanielAndrews%27%5D&count=10&until=2020-05-25 HTTP/1.1" 200 338
+INFO:root:scraping 10 tweets until 2020-05-25
+DEBUG:tweepy.binder:PARAMS: {'q': b"['@DanielAndrews']", 'count': b'10', 'until': b'2020-05-25'}
+DEBUG:requests_oauthlib.oauth1_auth:Signing request <PreparedRequest [GET]> using client <Client client_key=n4IgjuZTLvAa9WXpJx7W0skch, client_secret=****, resource_owner_key=1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
+DEBUG:requests_oauthlib.oauth1_auth:Including body in call to sign: False
+DEBUG:oauthlib.oauth1.rfc5849:Collected params: [('q', "['@DanielAndrews']"), ('count', '10'), ('until', '2020-05-25'), ('oauth_nonce', '139389622435081065191590367982'), ('oauth_timestamp', '1590367982'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'n4IgjuZTLvAa9WXpJx7W0skch'), ('oauth_token', '1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf')]
+DEBUG:oauthlib.oauth1.rfc5849:Normalized params: count=10&oauth_consumer_key=n4IgjuZTLvAa9WXpJx7W0skch&oauth_nonce=139389622435081065191590367982&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1590367982&oauth_token=1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf&oauth_version=1.0&q=%5B%27%40DanielAndrews%27%5D&until=2020-05-25
+DEBUG:oauthlib.oauth1.rfc5849:Normalized URI: https://api.twitter.com/1.1/search/tweets.json
+DEBUG:oauthlib.oauth1.rfc5849:Signing: signature base string: GET&https%3A%2F%2Fapi.twitter.com%2F1.1%2Fsearch%2Ftweets.json&count%3D10%26oauth_consumer_key%3Dn4IgjuZTLvAa9WXpJx7W0skch%26oauth_nonce%3D139389622435081065191590367982%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1590367982%26oauth_token%3D1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf%26oauth_version%3D1.0%26q%3D%255B%2527%2540DanielAndrews%2527%255D%26until%3D2020-05-25
+DEBUG:oauthlib.oauth1.rfc5849:Signature: tfIYyp7Flt1WXpi/mN5Jga6e0m8=
+DEBUG:requests_oauthlib.oauth1_auth:Updated url: https://api.twitter.com/1.1/search/tweets.json?q=%5B%27%40DanielAndrews%27%5D&count=10&until=2020-05-25
+DEBUG:requests_oauthlib.oauth1_auth:Updated headers: {'Host': 'api.twitter.com', 'Authorization': 'OAuth oauth_nonce="139389622435081065191590367982", oauth_timestamp="1590367982", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="n4IgjuZTLvAa9WXpJx7W0skch", oauth_token="1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf", oauth_signature="tfIYyp7Flt1WXpi%2FmN5Jga6e0m8%3D"'}
+DEBUG:requests_oauthlib.oauth1_auth:Updated body: None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.twitter.com:443
+DEBUG:urllib3.connectionpool:https://api.twitter.com:443 "GET /1.1/search/tweets.json?q=%5B%27%40DanielAndrews%27%5D&count=10&until=2020-05-25 HTTP/1.1" 200 337
+INFO:root:scraping 10 tweets until 2020-05-25
+DEBUG:tweepy.binder:PARAMS: {'q': b'@DanielAndrews', 'count': b'10', 'until': b'2020-05-25'}
+DEBUG:requests_oauthlib.oauth1_auth:Signing request <PreparedRequest [GET]> using client <Client client_key=n4IgjuZTLvAa9WXpJx7W0skch, client_secret=****, resource_owner_key=1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
+DEBUG:requests_oauthlib.oauth1_auth:Including body in call to sign: False
+DEBUG:oauthlib.oauth1.rfc5849:Collected params: [('q', '@DanielAndrews'), ('count', '10'), ('until', '2020-05-25'), ('oauth_nonce', '142188594690351951281590368035'), ('oauth_timestamp', '1590368035'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'n4IgjuZTLvAa9WXpJx7W0skch'), ('oauth_token', '1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf')]
+DEBUG:oauthlib.oauth1.rfc5849:Normalized params: count=10&oauth_consumer_key=n4IgjuZTLvAa9WXpJx7W0skch&oauth_nonce=142188594690351951281590368035&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1590368035&oauth_token=1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf&oauth_version=1.0&q=%40DanielAndrews&until=2020-05-25
+DEBUG:oauthlib.oauth1.rfc5849:Normalized URI: https://api.twitter.com/1.1/search/tweets.json
+DEBUG:oauthlib.oauth1.rfc5849:Signing: signature base string: GET&https%3A%2F%2Fapi.twitter.com%2F1.1%2Fsearch%2Ftweets.json&count%3D10%26oauth_consumer_key%3Dn4IgjuZTLvAa9WXpJx7W0skch%26oauth_nonce%3D142188594690351951281590368035%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1590368035%26oauth_token%3D1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf%26oauth_version%3D1.0%26q%3D%2540DanielAndrews%26until%3D2020-05-25
+DEBUG:oauthlib.oauth1.rfc5849:Signature: 3yVXLUIw4zXNUI2P+4a0HO5RqF0=
+DEBUG:requests_oauthlib.oauth1_auth:Updated url: https://api.twitter.com/1.1/search/tweets.json?q=%40DanielAndrews&count=10&until=2020-05-25
+DEBUG:requests_oauthlib.oauth1_auth:Updated headers: {'Host': 'api.twitter.com', 'Authorization': 'OAuth oauth_nonce="142188594690351951281590368035", oauth_timestamp="1590368035", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="n4IgjuZTLvAa9WXpJx7W0skch", oauth_token="1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf", oauth_signature="3yVXLUIw4zXNUI2P%2B4a0HO5RqF0%3D"'}
+DEBUG:requests_oauthlib.oauth1_auth:Updated body: None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.twitter.com:443
+DEBUG:urllib3.connectionpool:https://api.twitter.com:443 "GET /1.1/search/tweets.json?q=%40DanielAndrews&count=10&until=2020-05-25 HTTP/1.1" 200 51235
