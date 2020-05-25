@@ -57,7 +57,7 @@ if __name__ == "__main__":
                     id = None
 
                     for tweet in search_results:
-                        logging.info("saving tweet with id {}", tweet.id)
+                        logging.info("saving tweet with id {}".format(tweet.id))
                         id = tweet.id
                         logging.info("writing tweet to database")
                         data = tweet._json
