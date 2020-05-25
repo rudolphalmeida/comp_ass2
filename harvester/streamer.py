@@ -114,7 +114,7 @@ if __name__ == "__main__":
                 auth=credentials.authenticate(user),
                 # listener=ToFileListener(sys.stdout),
                 # listener=ToFileListener(open("tweets.json", "a")),
-                listener=CouchDBListener("http://admin:password@172.26.129.164:5984/"),
+                listener=CouchDBListener("http://admin:password@127.0.0.1:5984/"),
                 track=track,
             )
 

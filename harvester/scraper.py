@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
     while True:
 
-        couch = couchdb.Server("http://admin:password@<ip>:5834/")
+        couch = couchdb.Server("http://admin:password@127.0.0.1:5984/")
 
         try:
             db = couch["tweets"]  # Database already exists
