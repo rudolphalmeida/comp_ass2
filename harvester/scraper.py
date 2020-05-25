@@ -1,4 +1,5 @@
 import logging
+import time
 
 from tweepy import API
 
@@ -15,17 +16,48 @@ logging.basicConfig(
 if __name__ == "__main__":
     track = "@DanielAndrews"
 
-    auth = credentials.authenticate("SAG")
-    api = API(auth)
-
-    COUNT = 50000
     END_DATE = "2020-05-25"
+    MAX_COUNT = 100
 
-    logging.info("scraping {} tweets until {}".format(COUNT, END_DATE))
+    while True:
+        since = None
 
-    search_results = api.search(q=track, count=COUNT, until=END_DATE)
+        limits = {"RUD": 1, "SAG": 1, "SHE": 1, "SHA": 1, "VIS": 1}
 
-    with open("scraper.json", "a") as jsonFile:
-        for tweet in search_results:
-            logging.info("writing tweet to {}".format(jsonFile))
-            print(tweet, file=jsonFile)
+        for user in limits:
+            logging.info("scraping with user {}".format(user))
+
+            auth = credentials.authenticate(user)
+            api = API(auth)
+
+            while limits[user] > 0:
+                search_results = api.search(
+                    q=track,
+                    count=MAX_COUNT,
+                    until=END_DATE,
+                    include_entities=True,
+                    lang="en",
+                    since_id=since,
+                )
+
+                logging.info("found {} tweets".format(len(search_results)))
+
+                if len(search_results) > 0:
+                    id = None
+
+                    with open("scraper.json", "a") as jsonFile:
+                        for tweet in search_results:
+                            logging.info("saving tweet with id {}", tweet.id)
+                            id = tweet.id
+                            logging.info("writing tweet to {}".format(jsonFile))
+                            print(tweet._json, file=jsonFile)
+
+                        since = id
+
+                limits[user] = int(api.last_response.headers["x-rate-limit-remaining"])
+                logging.info(
+                    "rate limit remaining for {} is {}".format(user, limits[user])
+                )
+
+        logging.info("sleeping")
+        time.sleep(16 * 60)
