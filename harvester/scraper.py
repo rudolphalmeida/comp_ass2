@@ -61,7 +61,7 @@ if __name__ == "__main__":
                         logging.info("writing tweet to database")
                         data = json.loads(tweet)
                         # Create partition id
-                        data["_id"] = "scrape:{}".format(data["id"])
+                        # data["_id"] = "scrape:{}".format(data["id"])
                         db.save(data)
 
                         since = id

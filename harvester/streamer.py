@@ -58,7 +58,7 @@ class CouchDBListener(StreamListener):
         logging.info("writing tweet to couchdb")
         data = json.loads(raw_data)
         # Create partition id
-        data["_id"] = "stream:{}".format(data["id"])
+        # data["_id"] = "stream:{}".format(data["id"])
         self.db.save(data)
 
     def on_error(self, status_code):
