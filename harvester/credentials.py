@@ -13,6 +13,24 @@ _creds = {
         "TOKEN": "1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf",
         "TOKEN_SECRET": "8wwXvZLEoESaJXGQ53kNTtslnZfMAhjE5aBAVhyBRTUPI",
     },
+    "SHA": {
+        "CONS_KEY": "s5JcGUsQsZbzztZglsKOAxp1g",
+        "CONS_SECRET": "l59Hqb37lcqHrBvCE5ukfZAwCYazfOTjDO8vmkD1nj7TwNhRHI",
+        "TOKEN": "1254385776176934913-uHCfy7ktByNDqHoXdDBLLtENXO6OkP",
+        "TOKEN_SECRET": "pIUI2X1wWCAwK1UZIA97WZRL63mpLFxvgPDteaomnGOdz",
+    },
+    "VIS": {
+        "CONS_KEY": "xX6K54mGcfcRrukhOkAQ9Uw8H",
+        "CONS_SECRET": "UoVyfA7MUQg43rgVtfHuUGgQOCRx2tjgOTJ4y2INqX6uKuhrkZ",
+        "TOKEN": "1254680534963240963-JE09HbFoivaeSMHOu1vbGSWbXKqOjG",
+        "TOKEN_SECRET": "oErRHC0VZbTWbnLvpwEvqJMMuY5cKp0obKuVnkIiuhYcu",
+    },
+    "SHE": {
+        "CONS_KEY": "IbVf6OKF149LvIaBaHLqATMcy",
+        "CONS_SECRET": "UurXzYxD4az4mBNhZy3SYNMF9Ddmn4uAiEJxlwYWMivFoFtw5c",
+        "TOKEN": "1251775148274839553-5XmofQVNiy09bCUchneleCfECGbrZ0",
+        "TOKEN_SECRET": "hLrif1SabrixfwlsDCszGotoMxHoQoEIiPrTRHJnVHknS",
+    },
 }
 
 
