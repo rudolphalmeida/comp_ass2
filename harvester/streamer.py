@@ -1,5 +1,4 @@
 import json
-import sys
 import logging
 
 from tweepy.streaming import StreamListener
@@ -9,7 +8,13 @@ import couchdb
 import credentials
 
 
-logging.basicConfig(filename="harvester.log", filemode="a", level=logging.DEBUG)
+logging.basicConfig(
+    filename="harvester.log",
+    filemode="a",
+    level=logging.DEBUG,
+    format="%(asctime)s %(message)s",
+    datefmt="%m/%d/%Y %I:%M:%S %p",
+)
 
 
 class ToFileListener(StreamListener):
