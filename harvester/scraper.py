@@ -17,10 +17,12 @@ logging.basicConfig(
 )
 
 if __name__ == "__main__":
-    track = "@AnnastaciaMP OR @GladysB OR @MarkMcGowanMP OR @marshall_steven OR @PeterGutwein OR @ABarrMLA OR @fanniebay OR @DanielAndrews OR #AnnastaciaMP OR #GladysB OR #MarkMcGowanMP OR #marshall_steven OR #PeterGutwein OR #ABarrMLA OR #fanniebay OR #DanielAndrews OR #MarkMcGowan OR #Annastacia"
+    track = "@AnnastaciaMP OR @GladysB OR @MarkMcGowanMP OR @marshall_steven OR @PeterGutwein OR @ABarrMLA OR @fanniebay OR @DanielAndrews OR #AnnastaciaMP OR #GladysB OR #MarkMcGowanMP OR #marshall_steven OR #PeterGutwein OR #ABarrMLA OR #fanniebay OR #DanielAndrews OR #MarkMcGowan OR #Annastacia -filter:retweets"
 
-    END_DATE = "2020-05-25"
-    MAX_COUNT = 100
+    END_DATE = "2020-05-26"
+    MAX_COUNT = 1000
+
+    since = None
 
     while True:
 
@@ -30,8 +32,6 @@ if __name__ == "__main__":
             db = couch["tweets"]  # Database already exists
         except Exception:
             db = couch.create("tweets")
-
-        since = None
 
         limits = {"RUD": 1, "SAG": 1, "SHE": 1, "SHA": 1, "VIS": 1}
 
