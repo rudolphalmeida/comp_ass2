@@ -13,6 +13,12 @@ _creds = {
         "TOKEN": "1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf",
         "TOKEN_SECRET": "8wwXvZLEoESaJXGQ53kNTtslnZfMAhjE5aBAVhyBRTUPI",
     },
+     "SHA": {
+        "CONS_KEY": "s5JcGUsQsZbzztZglsKOAxp1g",
+        "CONS_SECRET": "l59Hqb37lcqHrBvCE5ukfZAwCYazfOTjDO8vmkD1nj7TwNhRHI",
+        "TOKEN": "1254385776176934913-uHCfy7ktByNDqHoXdDBLLtENXO6OkP",
+        "TOKEN_SECRET": "pIUI2X1wWCAwK1UZIA97WZRL63mpLFxvgPDteaomnGOdz",
+    },
 }
 
 
