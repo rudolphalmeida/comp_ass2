@@ -1,0 +1,19 @@
+INFO:root:using RUD credentials for streaming
+INFO:root:beginning streaming
+DEBUG:requests_oauthlib.oauth1_auth:Signing request <PreparedRequest [POST]> using client <Client client_key=YiYRZRnFw6BmZ62JUQuRrJJ1V, client_secret=****, resource_owner_key=132562597-zU3Z7EHp4Q3vJiXvKseL2ucVqALYldbI5B5l8IR0, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
+DEBUG:requests_oauthlib.oauth1_auth:Including body in call to sign: True
+DEBUG:oauthlib.oauth1.rfc5849:Collected params: [('delimited', 'length'), ('oauth_nonce', '101680704747667372291590366241'), ('oauth_timestamp', '1590366241'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'YiYRZRnFw6BmZ62JUQuRrJJ1V'), ('oauth_token', '132562597-zU3Z7EHp4Q3vJiXvKseL2ucVqALYldbI5B5l8IR0'), ('track', '@DanielAndrewsMP')]
+DEBUG:oauthlib.oauth1.rfc5849:Normalized params: delimited=length&oauth_consumer_key=YiYRZRnFw6BmZ62JUQuRrJJ1V&oauth_nonce=101680704747667372291590366241&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1590366241&oauth_token=132562597-zU3Z7EHp4Q3vJiXvKseL2ucVqALYldbI5B5l8IR0&oauth_version=1.0&track=%40DanielAndrewsMP
+DEBUG:oauthlib.oauth1.rfc5849:Normalized URI: https://stream.twitter.com/1.1/statuses/filter.json
+DEBUG:oauthlib.oauth1.rfc5849:Signing: signature base string: POST&https%3A%2F%2Fstream.twitter.com%2F1.1%2Fstatuses%2Ffilter.json&delimited%3Dlength%26oauth_consumer_key%3DYiYRZRnFw6BmZ62JUQuRrJJ1V%26oauth_nonce%3D101680704747667372291590366241%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1590366241%26oauth_token%3D132562597-zU3Z7EHp4Q3vJiXvKseL2ucVqALYldbI5B5l8IR0%26oauth_version%3D1.0%26track%3D%2540DanielAndrewsMP
+DEBUG:oauthlib.oauth1.rfc5849:Signature: IFq6fIjLTs+QMx+Sl+YLuhtHM4E=
+DEBUG:requests_oauthlib.oauth1_auth:Updated url: https://stream.twitter.com/1.1/statuses/filter.json?delimited=length
+DEBUG:requests_oauthlib.oauth1_auth:Updated headers: {'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '24', 'Authorization': 'OAuth oauth_nonce="101680704747667372291590366241", oauth_timestamp="1590366241", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="YiYRZRnFw6BmZ62JUQuRrJJ1V", oauth_token="132562597-zU3Z7EHp4Q3vJiXvKseL2ucVqALYldbI5B5l8IR0", oauth_signature="IFq6fIjLTs%2BQMx%2BSl%2BYLuhtHM4E%3D"'}
+DEBUG:requests_oauthlib.oauth1_auth:Updated body: 'track=%40DanielAndrewsMP'
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): stream.twitter.com:443
+DEBUG:urllib3.connectionpool:https://stream.twitter.com:443 "POST /1.1/statuses/filter.json?delimited=length HTTP/1.1" 200 None
+INFO:root:writing tweet to <_io.TextIOWrapper name='tweets.json' mode='a' encoding='UTF-8'>
+INFO:root:writing tweet to <_io.TextIOWrapper name='tweets.json' mode='a' encoding='UTF-8'>
+INFO:root:writing tweet to <_io.TextIOWrapper name='tweets.json' mode='a' encoding='UTF-8'>
+INFO:root:writing tweet to <_io.TextIOWrapper name='tweets.json' mode='a' encoding='UTF-8'>
+INFO:root:writing tweet to <_io.TextIOWrapper name='tweets.json' mode='a' encoding='UTF-8'>

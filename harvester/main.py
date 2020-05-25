@@ -23,7 +23,7 @@ class ToFileListener(StreamListener):
 
     def on_data(self, raw_data):
         logging.info("writing tweet to {}".format(self.file))
-        print(raw_data, file=self.file, end=",")
+        print(raw_data, file=self.file, end="")
         return True
 
     def on_error(self, status_code):
