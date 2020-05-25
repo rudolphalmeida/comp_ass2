@@ -60,7 +60,7 @@ if __name__ == "__main__":
                         logging.info("saving tweet with id {}", tweet.id)
                         id = tweet.id
                         logging.info("writing tweet to database")
-                        data = json.loads(tweet)
+                        data = json.loads(tweet._json)
                         # Create partition id
                         # data["_id"] = "scrape:{}".format(data["id"])
                         data["sentiment"] = analysis.sentiment(data["text"])
