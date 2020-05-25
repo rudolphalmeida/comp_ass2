@@ -1,11 +1,15 @@
 import json
 import sys
+import logging
 
 from tweepy.streaming import StreamListener
 from tweepy import Stream
 import couchdb
 
 import credentials
+
+
+logging.basicConfig(filename="harvester.log", filemode="a", level=logging.DEBUG)
 
 
 class ToFileListener(StreamListener):
@@ -18,10 +22,12 @@ class ToFileListener(StreamListener):
         super().__init__(api=api)
 
     def on_data(self, raw_data):
+        logging.info("writing tweet to {}".format(self.file))
         print(raw_data, file=self.file, end=",")
         return True
 
     def on_error(self, status_code):
+        logging.warning("received status code {}".format(status_code))
         if status_code == 420:  # Rate limit reached
             # Disconnect the stream
             return False
@@ -39,47 +45,31 @@ class CouchDBListener(StreamListener):
             self.db = couch.create("tweets")
         except Exception:
             self.db = couch["tweets"]  # Table is created
+        logging.info("connected to couchdb database")
         super().__init__(api=api)
 
     def on_data(self, raw_data):
+        logging.info("writing tweet to couchdb")
         self.db.save(json.loads(raw_data))
 
     def on_error(self, status_code):
+        logging.warning("received status code {}".format(status_code))
         if status_code == 420:  # Rate limit reached
             # Disconnect the stream
             return False
 
 
 def stream_tweets(auth, listener, track):
+    logging.info("beginning streaming")
     stream = Stream(auth, listener)
     stream.filter(track=track)
 
 
 if __name__ == "__main__":
-    # AUS_GEO_RANGE = [112, -44, 155, -10]
-    track = [
-        "#MasterChefAU",
-        "#masterchefaustralia",
-        "#masterchef",
-        "#SimonToohey",
-        "#tastingaustralia",
-        "#masterchef2020",
-        "#season12",
-        "@RoseAdamCooks",
-        "@sarahclarecooks",
-        "@S_Tiong",
-        "@SimonToohey",
-        "@TessaBoersma",
-        "@trackycollins_",
-        "@harry_fos",
-        "@hayden_quinn",
-        "@jesselemon",
-        "@khanhong",
-    ]
-
     track = ["@DanielAndrewsMP"]
 
     for user in ["RUD", "SAG"]:
+        logging.info("using {} credentials for streaming".format(user))
         stream_tweets(
             auth=credentials.authenticate(user),
             listener=ToFileListener(open("tweets.json", "a")),
