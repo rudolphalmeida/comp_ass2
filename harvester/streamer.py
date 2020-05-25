@@ -102,6 +102,8 @@ if __name__ == "__main__":
         "#ABarrMLA",
         "#fanniebay",
         "#DanielAndrews",
+        "#Annastacia",
+        "#MarkMcGowan",
     ]
 
     limits = {"RUD": 1, "SAG": 1, "SHE": 1, "SHA": 1, "VIS": 1}

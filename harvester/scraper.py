@@ -17,7 +17,7 @@ logging.basicConfig(
 )
 
 if __name__ == "__main__":
-    track = "@AnnastaciaMP OR @GladysB OR @MarkMcGowanMP OR @marshall_steven OR @PeterGutwein OR @ABarrMLA OR @fanniebay OR @DanielAndrews OR #AnnastaciaMP OR #GladysB OR #MarkMcGowanMP OR #marshall_steven OR #PeterGutwein OR #ABarrMLA OR #fanniebay OR #DanielAndrews"
+    track = "@AnnastaciaMP OR @GladysB OR @MarkMcGowanMP OR @marshall_steven OR @PeterGutwein OR @ABarrMLA OR @fanniebay OR @DanielAndrews OR #AnnastaciaMP OR #GladysB OR #MarkMcGowanMP OR #marshall_steven OR #PeterGutwein OR #ABarrMLA OR #fanniebay OR #DanielAndrews OR #MarkMcGowan OR #Annastacia"
 
     END_DATE = "2020-05-25"
     MAX_COUNT = 100
@@ -60,7 +60,7 @@ if __name__ == "__main__":
                         logging.info("saving tweet with id {}", tweet.id)
                         id = tweet.id
                         logging.info("writing tweet to database")
-                        data = json.loads(tweet._json)
+                        data = tweet._json
                         # Create partition id
                         # data["_id"] = "scrape:{}".format(data["id"])
                         data["sentiment"] = analysis.sentiment(data["text"])
