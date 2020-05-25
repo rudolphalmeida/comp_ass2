@@ -1,12 +1,14 @@
 import json
 import logging
 import time
+import sys
 
 from tweepy.streaming import StreamListener
 from tweepy import Stream
 import couchdb
 
 import credentials
+import analysis
 
 
 logging.basicConfig(
@@ -29,7 +31,14 @@ class ToFileListener(StreamListener):
 
     def on_data(self, raw_data):
         logging.info("writing tweet to {}".format(self.file))
-        print(raw_data, file=self.file, end="")
+        data = json.loads(raw_data)
+        # Create partition id
+        # data["_id"] = "stream:{}".format(data["id"])
+        if "text" not in data:
+            return True
+
+        data["sentiment"] = analysis.sentiment(data["text"])
+        print(data, file=self.file)
         return True
 
     def on_error(self, status_code):
@@ -59,6 +68,7 @@ class CouchDBListener(StreamListener):
         data = json.loads(raw_data)
         # Create partition id
         # data["_id"] = "stream:{}".format(data["id"])
+        data["sentiment"] = analysis.sentiment(data["text"])
         self.db.save(data)
 
     def on_error(self, status_code):
@@ -94,8 +104,9 @@ if __name__ == "__main__":
 
             stream_tweets(
                 auth=credentials.authenticate(user),
+                listener=ToFileListener(sys.stdout),
                 # listener=ToFileListener(open("tweets.json", "a")),
-                listener=CouchDBListener("http://admin:password@172.26.129.164:5834/"),
+                # listener=CouchDBListener("http://admin:password@172.26.129.164:5834/"),
                 track=track,
             )
 

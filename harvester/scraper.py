@@ -6,6 +6,7 @@ from tweepy import API
 import couchdb
 
 import credentials
+import analysis
 
 logging.basicConfig(
     filename="scraper.log",
@@ -62,6 +63,7 @@ if __name__ == "__main__":
                         data = json.loads(tweet)
                         # Create partition id
                         # data["_id"] = "scrape:{}".format(data["id"])
+                        data["sentiment"] = analysis.sentiment(data["text"])
                         db.save(data)
 
                         since = id
