@@ -94,8 +94,8 @@ if __name__ == "__main__":
 
             stream_tweets(
                 auth=credentials.authenticate(user),
-                listener=ToFileListener(open("tweets.json", "a")),
-                # listener=CouchDBListener("http://admin:password@<ip>:5834/"),
+                # listener=ToFileListener(open("tweets.json", "a")),
+                listener=CouchDBListener("http://admin:password@172.26.129.164:5834/"),
                 track=track,
             )
 
