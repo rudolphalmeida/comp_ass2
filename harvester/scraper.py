@@ -17,7 +17,7 @@ logging.basicConfig(
 )
 
 if __name__ == "__main__":
-    track = "@AnnastaciaMP OR @GladysB OR @MarkMcGowanMP OR @marshall_steven OR @PeterGutwein OR @ABarrMLA OR @fanniebay OR @DanielAndrews"
+    track = "@AnnastaciaMP OR @GladysB OR @MarkMcGowanMP OR @marshall_steven OR @PeterGutwein OR @ABarrMLA OR @fanniebay OR @DanielAndrews OR #AnnastaciaMP OR #GladysB OR #MarkMcGowanMP OR #marshall_steven OR #PeterGutwein OR #ABarrMLA OR #fanniebay OR #DanielAndrews"
 
     END_DATE = "2020-05-25"
     MAX_COUNT = 100

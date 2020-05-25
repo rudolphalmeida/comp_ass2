@@ -94,6 +94,14 @@ if __name__ == "__main__":
         "@ABarrMLA",
         "@fanniebay",
         "@DanielAndrews",
+        "#AnnastaciaMP",
+        "#GladysB",
+        "#MarkMcGowanMP",
+        "#marshall_steven",
+        "#PeterGutwein",
+        "#ABarrMLA",
+        "#fanniebay",
+        "#DanielAndrews",
     ]
 
     limits = {"RUD": 1, "SAG": 1, "SHE": 1, "SHA": 1, "VIS": 1}
@@ -104,9 +112,9 @@ if __name__ == "__main__":
 
             stream_tweets(
                 auth=credentials.authenticate(user),
-                listener=ToFileListener(sys.stdout),
+                # listener=ToFileListener(sys.stdout),
                 # listener=ToFileListener(open("tweets.json", "a")),
-                # listener=CouchDBListener("http://admin:password@172.26.129.164:5834/"),
+                listener=CouchDBListener("http://admin:password@172.26.129.164:5984/"),
                 track=track,
             )
 
