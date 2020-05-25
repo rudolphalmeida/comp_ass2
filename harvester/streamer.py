@@ -73,7 +73,7 @@ def stream_tweets(auth, listener, track):
 if __name__ == "__main__":
     track = ["@DanielAndrewsMP"]
 
-    for user in ["RUD", "SAG"]:
+    for user in ["RUD", "SAG", "VIS", "SHE", "SHA"]:
         logging.info("using {} credentials for streaming".format(user))
         stream_tweets(
             auth=credentials.authenticate(user),
