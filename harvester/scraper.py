@@ -1,7 +1,9 @@
 import logging
 import time
+import json
 
 from tweepy import API
+import couchdb
 
 import credentials
 
@@ -14,12 +16,20 @@ logging.basicConfig(
 )
 
 if __name__ == "__main__":
-    track = "@DanielAndrews"
+    track = "@AnnastaciaMP OR @GladysB OR @MarkMcGowanMP OR @marshall_steven OR @PeterGutwein OR @ABarrMLA OR @fanniebay OR @DanielAndrews"
 
     END_DATE = "2020-05-25"
     MAX_COUNT = 100
 
     while True:
+
+        couch = couchdb.Server("http://admin:password@<ip>:5834/")
+
+        try:
+            db = couch["tweets"]  # Database already exists
+        except Exception:
+            db = couch.create("tweets")
+
         since = None
 
         limits = {"RUD": 1, "SAG": 1, "SHE": 1, "SHA": 1, "VIS": 1}
@@ -45,12 +55,14 @@ if __name__ == "__main__":
                 if len(search_results) > 0:
                     id = None
 
-                    with open("scraper.json", "a") as jsonFile:
-                        for tweet in search_results:
-                            logging.info("saving tweet with id {}", tweet.id)
-                            id = tweet.id
-                            logging.info("writing tweet to {}".format(jsonFile))
-                            print(tweet._json, file=jsonFile)
+                    for tweet in search_results:
+                        logging.info("saving tweet with id {}", tweet.id)
+                        id = tweet.id
+                        logging.info("writing tweet to database")
+                        data = json.loads(tweet)
+                        # Create partition id
+                        data["_id"] = "scrape:{}".format(data["id"])
+                        db.save(data)
 
                         since = id
 

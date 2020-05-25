@@ -1,5 +1,6 @@
 import json
 import logging
+import time
 
 from tweepy.streaming import StreamListener
 from tweepy import Stream
@@ -47,9 +48,9 @@ class CouchDBListener(StreamListener):
     def __init__(self, server_id, api=None):
         couch = couchdb.Server(server_id)
         try:
-            self.db = couch.create("tweets")
-        except Exception:
             self.db = couch["tweets"]  # Table is created
+        except Exception:
+            self.db = couch.create("tweets")
         logging.info("connected to couchdb database")
         super().__init__(api=api)
 
@@ -71,12 +72,30 @@ def stream_tweets(auth, listener, track):
 
 
 if __name__ == "__main__":
-    track = ["@DanielAndrewsMP"]
+    track = [
+        "@AnnastaciaMP",
+        "@GladysB",
+        "@MarkMcGowanMP",
+        "@marshall_steven",
+        "@PeterGutwein",
+        "@ABarrMLA",
+        "@fanniebay",
+        "@DanielAndrews",
+    ]
 
-    for user in ["RUD", "SAG", "VIS", "SHE", "SHA"]:
-        logging.info("using {} credentials for streaming".format(user))
-        stream_tweets(
-            auth=credentials.authenticate(user),
-            listener=ToFileListener(open("tweets.json", "a")),
-            track=track,
-        )
+    limits = {"RUD": 1, "SAG": 1, "SHE": 1, "SHA": 1, "VIS": 1}
+
+    while True:
+        for user in limits:
+            logging.info("scraping with user {}".format(user))
+
+            stream_tweets(
+                auth=credentials.authenticate(user),
+                listener=ToFileListener(open("tweets.json", "a")),
+                # listener=CouchDBListener("http://admin:password@<ip>:5834/"),
+                track=track,
+            )
+
+            logging.info("rate limit reached for {}".format(user))
+
+        time.sleep(16 * 60)
