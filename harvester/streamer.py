@@ -13,7 +13,7 @@ import analysis
 
 logging.basicConfig(
     filename="harvester.log",
-    filemode="a",
+    filemode="w",
     level=logging.DEBUG,
     format="%(asctime)s %(message)s",
     datefmt="%m/%d/%Y %I:%M:%S %p",
@@ -106,17 +106,17 @@ if __name__ == "__main__":
         "#MarkMcGowan",
     ]
 
-    limits = {"RUD": 1, "SAG": 1, "SHE": 1, "SHA": 1, "VIS": 1}
-
     while True:
+        limits = {"RUD": 1, "SAG": 1, "SHE": 1, "SHA": 1, "VIS": 1}
+
         for user in limits:
             logging.info("scraping with user {}".format(user))
 
             stream_tweets(
                 auth=credentials.authenticate(user),
-                # listener=ToFileListener(sys.stdout),
+                listener=ToFileListener(sys.stdout),
                 # listener=ToFileListener(open("tweets.json", "a")),
-                listener=CouchDBListener("http://admin:password@127.0.0.1:5984/"),
+                # listener=CouchDBListener("http://admin:password@127.0.0.1:5984/"),
                 track=track,
             )
 
