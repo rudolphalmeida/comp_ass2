@@ -65,8 +65,7 @@ if __name__ == "__main__":
             data["sentiment"] = analysis.sentiment(data["text"])
 
             # db.save(data)
-            # print(data)
-            print("*" * 80)
+            print(data)
     except error.TweepError as e:  # Should cover RateLimitException
         logging.error("exception in search_results: {}".format(e))
         logging.info("exiting...")
