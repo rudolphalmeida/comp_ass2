@@ -1,11 +1,9 @@
 import logging
-import sys
 
 from tweepy.streaming import StreamListener
 from tweepy import Stream
 import couchdb
 
-import credentials
 import analysis
 
 
@@ -115,7 +113,7 @@ if __name__ == "__main__":
 
     stream_tweets(
         # auth=credentials.authenticate(user),
-        listener=ToFileListener(sys.stdout),
+        # listener=ToFileListener(sys.stdout),
         # listener=ToFileListener(open("tweets.json", "a")),
         listener=CouchDBListener("http://admin:password@127.0.0.1:5984/"),
         track=track,
