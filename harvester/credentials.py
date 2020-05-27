@@ -35,7 +35,7 @@ _creds = {
 
 
 def _load_creds(username):
-    assert username in ["RUD", "SAG", "SHA", "VIS", "SHE"]
+    assert username in ["RUD", "SAG", "SHA", "VIS", "SHE", "SHE2"]
     return _creds[username]
 
 

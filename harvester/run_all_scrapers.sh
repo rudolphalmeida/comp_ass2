@@ -1,0 +1,5 @@
+python3 scraper.py SAG "$(head -n1 queries.txt | tail -1)"
+python3 scraper.py SHE "$(head -n2 queries.txt | tail -1)"
+python3 scraper.py SHA "$(head -n3 queries.txt | tail -1)"
+python3 scraper.py VIS "$(head -n4 queries.txt | tail -1)"
+python3 scraper.py SHE2 "$(head -n5 queries.txt | tail -1)"
