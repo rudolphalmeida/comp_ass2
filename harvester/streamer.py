@@ -6,6 +6,7 @@ from tweepy import Stream
 import couchdb
 
 import analysis
+import credentials
 
 
 logging.basicConfig(
@@ -113,7 +114,7 @@ if __name__ == "__main__":
     logging.info("scraping with user {}".format(user))
 
     stream_tweets(
-        # auth=credentials.authenticate(user),
+        auth=credentials.authenticate(user),
         # listener=ToFileListener(sys.stdout),
         # listener=ToFileListener(open("tweets.json", "a")),
         listener=CouchDBListener("http://admin:password@127.0.0.1:5984/"),
