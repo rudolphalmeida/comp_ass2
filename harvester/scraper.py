@@ -1,5 +1,4 @@
 import logging
-from collections import Counter
 import argparse
 
 from tweepy import API, error, Cursor
@@ -27,18 +26,14 @@ if __name__ == "__main__":
 
     assert cred_user in ["SHE", "SAG", "SHA", "VIS", "SHE2"]
 
-    # track = "@AnnastaciaMP OR @GladysB OR @MarkMcGowanMP OR @marshall_steven OR @PeterGutwein OR @ABarrMLA OR @fanniebay OR @DanielAndrews OR #AnnastaciaMP OR #GladysB OR #MarkMcGowanMP OR #marshall_steven OR #PeterGutwein OR #ABarrMLA OR #fanniebay OR #DanielAndrews OR #MarkMcGowan OR #Annastacia"
-
     MAX_COUNT = 1000
 
-    c = Counter()
+    couch = couchdb.Server("http://admin:password@127.0.0.1:5984/")
 
-    # couch = couchdb.Server("http://admin:password@127.0.0.1:5984/")
-
-    # try:
-    #     db = couch["tweets"]  # Database already exists
-    # except Exception:
-    #     db = couch.create("tweets")
+    try:
+        db = couch["tweets"]  # Database already exists
+    except Exception:
+        db = couch.create("tweets")
 
     logging.info("scraping with user {}".format(cred_user))
     logging.info("using query {}".format(query))
@@ -51,25 +46,22 @@ if __name__ == "__main__":
     ).items(5000000)
 
     try:
-        for tweet in search_results:
-            logging.info("saving tweet with id {}".format(tweet.id))
-
-            c[tweet.id] += 1
-            logging.info("writing tweet to database")
+        for status in search_results:
+            logging.info("saving tweet with id {}".format(status.id))
 
             try:
-                data = analysis.extract(tweet._json)
-            except Exception as e:
+                data = analysis.extract(status)
+            except KeyError as e:
                 logging.info("exception in extract: {}".format(e))
                 continue
+
+            if data is None:
+                continue
+
             data["sentiment"] = analysis.sentiment(data["text"])
 
-            # db.save(data)
-            print(data)
+            db.save(data)
+            # print(data)
     except error.TweepError as e:  # Should cover RateLimitException
         logging.error("exception in search_results: {}".format(e))
         logging.info("exiting...")
-    except Exception:
-        logging.info("shutting down...")
-
-    print(c.most_common(10))

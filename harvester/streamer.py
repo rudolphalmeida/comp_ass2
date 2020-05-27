@@ -1,6 +1,4 @@
-import json
 import logging
-import time
 import sys
 
 from tweepy.streaming import StreamListener
@@ -29,13 +27,12 @@ class ToFileListener(StreamListener):
         self.file = file
         super().__init__(api=api)
 
-    def on_data(self, raw_data):
+    def on_status(self, status):
         logging.info("writing tweet to {}".format(self.file))
 
         data = None
         try:
-            raw_tweet = json.loads(raw_data)
-            data = analysis.extract(raw_tweet)
+            data = analysis.extract(status)
         except Exception as e:
             logging.info("exception in parsing tweet: {}".format(e))
             return True
@@ -66,12 +63,11 @@ class CouchDBListener(StreamListener):
         logging.info("connected to couchdb database")
         super().__init__(api=api)
 
-    def on_data(self, raw_data):
+    def on_status(self, status):
         logging.info("writing tweet to couchdb")
         data = None
         try:
-            raw_tweet = json.loads(raw_data)
-            data = analysis.extract(raw_tweet)
+            data = analysis.extract(status)
         except Exception as e:
             logging.info("exception in parsing tweet: {}".format(e))
             return True
@@ -118,9 +114,9 @@ if __name__ == "__main__":
     logging.info("scraping with user {}".format(user))
 
     stream_tweets(
-        auth=credentials.authenticate(user),
+        # auth=credentials.authenticate(user),
         listener=ToFileListener(sys.stdout),
         # listener=ToFileListener(open("tweets.json", "a")),
-        # listener=CouchDBListener("http://admin:password@127.0.0.1:5984/"),
+        listener=CouchDBListener("http://admin:password@127.0.0.1:5984/"),
         track=track,
     )

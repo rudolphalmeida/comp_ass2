@@ -13,33 +13,40 @@ names = {
 }
 
 
-def get_mentions_and_hashtags(entities):
+def get_text(status):
+    if hasattr(status, "retweeted_status"):  # Check if Retweet
+        try:
+            return status.retweeted_status.extended_tweet["full_text"]
+        except AttributeError:
+            return status.retweeted_status.text
+    else:
+        try:
+            return status.extended_tweet["full_text"]
+        except AttributeError:
+            return status.text
+
+
+def get_mentions_and_hashtags(status):
     res = []
 
-    hashtags = entities["hashtags"]
-    for hashtag in hashtags:
-        res.append(hashtag["text"].lower())
+    if hasattr(status, "extended_tweet"):
+        for hashtag in status.extended_tweet.entities["hashtags"]:
+            res.append(hashtag["text"].lower())
 
-    user_mentions = entities["user_mentions"]
-    for user in user_mentions:
-        res.append(user["screen_name"].lower())
+        for user in status.extended_tweet.entities["user_mentions"]:
+            res.append(user["screen_name"].lower())
+    else:
+        for hashtag in status.entities["hashtags"]:
+            res.append(hashtag["text"].lower())
+
+        for user in status.entities["user_mentions"]:
+            res.append(user["screen_name"].lower())
 
     return res
 
 
-def get_full_text(status):
-    try:
-        return status.retweeted_status.full_text
-    except AttributeError:  # Not a Retweet
-        return status.full_text
-
-
 def mentions(tweet, name):
-    mentions_and_hashtags = get_mentions_and_hashtags(
-        tweet["entities"]
-        if not tweet.get("truncated", False)
-        else tweet["extended_tweet"]["entities"]
-    )
+    mentions_and_hashtags = get_mentions_and_hashtags(tweet)
 
     candidates = names[name]
 
@@ -49,20 +56,18 @@ def mentions(tweet, name):
     return 0
 
 
-def extract(tweet):
+def extract(status):
     clean_tweet = dict()
 
-    clean_tweet["id"] = tweet.id
-    clean_tweet["text"] = get_full_text(tweet)
+    clean_tweet["id"] = status.id
+    clean_tweet["text"] = get_text(status)
 
-    print(clean_tweet["text"])
-
-    clean_tweet["Daniel_Andrews"] = mentions(tweet, "Daniel_Andrews")
-    clean_tweet["Annastacia_Palaszczuk"] = mentions(tweet, "Annastacia_Palaszczuk")
-    clean_tweet["Gladys_Berejiklian"] = mentions(tweet, "Gladys_Berejiklian")
-    clean_tweet["Mark_McGowan"] = mentions(tweet, "Mark_McGowan")
-    clean_tweet["Steven_Marshall"] = mentions(tweet, "Steven_Marshall")
-    clean_tweet["Peter_Gutwein"] = mentions(tweet, "Peter_Gutwein")
+    clean_tweet["Daniel_Andrews"] = mentions(status, "Daniel_Andrews")
+    clean_tweet["Annastacia_Palaszczuk"] = mentions(status, "Annastacia_Palaszczuk")
+    clean_tweet["Gladys_Berejiklian"] = mentions(status, "Gladys_Berejiklian")
+    clean_tweet["Mark_McGowan"] = mentions(status, "Mark_McGowan")
+    clean_tweet["Steven_Marshall"] = mentions(status, "Steven_Marshall")
+    clean_tweet["Peter_Gutwein"] = mentions(status, "Peter_Gutwein")
 
     return clean_tweet
 
