@@ -1,4 +1,5 @@
 import logging
+import json
 
 from tweepy.streaming import StreamListener
 from tweepy import Stream
@@ -71,7 +72,7 @@ class CouchDBListener(StreamListener):
             return True
 
         data["sentiment"] = analysis.sentiment(data["text"])
-        self.db.save(data)
+        self.db.save(json.dumps(data))
 
     def on_error(self, status_code):
         logging.warning("received status code {}".format(status_code))

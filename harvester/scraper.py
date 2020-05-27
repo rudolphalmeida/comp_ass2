@@ -1,5 +1,6 @@
 import logging
 import argparse
+import json
 
 from tweepy import API, error, Cursor
 import couchdb
@@ -60,7 +61,7 @@ if __name__ == "__main__":
 
             data["sentiment"] = analysis.sentiment(data["text"])
 
-            db.save(data)
+            db.save(json.dumps(data))
             # print(data)
     except error.TweepError as e:  # Should cover RateLimitException
         logging.error("exception in search_results: {}".format(e))
