@@ -1,286 +1,329 @@
-05/26/2020 10:46:30 AM scraping with user SAG
-05/26/2020 10:46:30 AM PARAMS: {'q': b'@AnnastaciaMP OR @GladysB OR @MarkMcGowanMP OR @marshall_steven OR @PeterGutwein OR @ABarrMLA OR @fanniebay OR @DanielAndrews OR #AnnastaciaMP OR #GladysB OR #MarkMcGowanMP OR #marshall_steven OR #PeterGutwein OR #ABarrMLA OR #fanniebay OR #DanielAndrews OR #MarkMcGowan OR #Annastacia', 'count': b'1000', 'until': b'2020-05-26', 'include_entities': b'True', 'lang': b'en'}
-05/26/2020 10:46:30 AM Signing request <PreparedRequest [GET]> using client <Client client_key=n4IgjuZTLvAa9WXpJx7W0skch, client_secret=****, resource_owner_key=1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
-05/26/2020 10:46:30 AM Including body in call to sign: False
-05/26/2020 10:46:30 AM Collected params: [('q', '@AnnastaciaMP OR @GladysB OR @MarkMcGowanMP OR @marshall_steven OR @PeterGutwein OR @ABarrMLA OR @fanniebay OR @DanielAndrews OR #AnnastaciaMP OR #GladysB OR #MarkMcGowanMP OR #marshall_steven OR #PeterGutwein OR #ABarrMLA OR #fanniebay OR #DanielAndrews OR #MarkMcGowan OR #Annastacia'), ('count', '1000'), ('until', '2020-05-26'), ('include_entities', 'True'), ('lang', 'en'), ('oauth_nonce', '130115769787130108161590453990'), ('oauth_timestamp', '1590453990'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'n4IgjuZTLvAa9WXpJx7W0skch'), ('oauth_token', '1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf')]
-05/26/2020 10:46:30 AM Normalized params: count=1000&include_entities=True&lang=en&oauth_consumer_key=n4IgjuZTLvAa9WXpJx7W0skch&oauth_nonce=130115769787130108161590453990&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1590453990&oauth_token=1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf&oauth_version=1.0&q=%40AnnastaciaMP%20OR%20%40GladysB%20OR%20%40MarkMcGowanMP%20OR%20%40marshall_steven%20OR%20%40PeterGutwein%20OR%20%40ABarrMLA%20OR%20%40fanniebay%20OR%20%40DanielAndrews%20OR%20%23AnnastaciaMP%20OR%20%23GladysB%20OR%20%23MarkMcGowanMP%20OR%20%23marshall_steven%20OR%20%23PeterGutwein%20OR%20%23ABarrMLA%20OR%20%23fanniebay%20OR%20%23DanielAndrews%20OR%20%23MarkMcGowan%20OR%20%23Annastacia&until=2020-05-26
-05/26/2020 10:46:30 AM Normalized URI: https://api.twitter.com/1.1/search/tweets.json
-05/26/2020 10:46:30 AM Signing: signature base string: GET&https%3A%2F%2Fapi.twitter.com%2F1.1%2Fsearch%2Ftweets.json&count%3D1000%26include_entities%3DTrue%26lang%3Den%26oauth_consumer_key%3Dn4IgjuZTLvAa9WXpJx7W0skch%26oauth_nonce%3D130115769787130108161590453990%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1590453990%26oauth_token%3D1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf%26oauth_version%3D1.0%26q%3D%2540AnnastaciaMP%2520OR%2520%2540GladysB%2520OR%2520%2540MarkMcGowanMP%2520OR%2520%2540marshall_steven%2520OR%2520%2540PeterGutwein%2520OR%2520%2540ABarrMLA%2520OR%2520%2540fanniebay%2520OR%2520%2540DanielAndrews%2520OR%2520%2523AnnastaciaMP%2520OR%2520%2523GladysB%2520OR%2520%2523MarkMcGowanMP%2520OR%2520%2523marshall_steven%2520OR%2520%2523PeterGutwein%2520OR%2520%2523ABarrMLA%2520OR%2520%2523fanniebay%2520OR%2520%2523DanielAndrews%2520OR%2520%2523MarkMcGowan%2520OR%2520%2523Annastacia%26until%3D2020-05-26
-05/26/2020 10:46:30 AM Signature: ufZ5XCJRYLN9nX8TTGVnZpcCK2Q=
-05/26/2020 10:46:30 AM Updated url: https://api.twitter.com/1.1/search/tweets.json?q=%40AnnastaciaMP+OR+%40GladysB+OR+%40MarkMcGowanMP+OR+%40marshall_steven+OR+%40PeterGutwein+OR+%40ABarrMLA+OR+%40fanniebay+OR+%40DanielAndrews+OR+%23AnnastaciaMP+OR+%23GladysB+OR+%23MarkMcGowanMP+OR+%23marshall_steven+OR+%23PeterGutwein+OR+%23ABarrMLA+OR+%23fanniebay+OR+%23DanielAndrews+OR+%23MarkMcGowan+OR+%23Annastacia&count=1000&until=2020-05-26&include_entities=True&lang=en
-05/26/2020 10:46:30 AM Updated headers: {'Host': 'api.twitter.com', 'Authorization': 'OAuth oauth_nonce="130115769787130108161590453990", oauth_timestamp="1590453990", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="n4IgjuZTLvAa9WXpJx7W0skch", oauth_token="1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf", oauth_signature="ufZ5XCJRYLN9nX8TTGVnZpcCK2Q%3D"'}
-05/26/2020 10:46:30 AM Updated body: None
-05/26/2020 10:46:30 AM Starting new HTTPS connection (1): api.twitter.com:443
-05/26/2020 10:46:31 AM https://api.twitter.com:443 "GET /1.1/search/tweets.json?q=%40AnnastaciaMP+OR+%40GladysB+OR+%40MarkMcGowanMP+OR+%40marshall_steven+OR+%40PeterGutwein+OR+%40ABarrMLA+OR+%40fanniebay+OR+%40DanielAndrews+OR+%23AnnastaciaMP+OR+%23GladysB+OR+%23MarkMcGowanMP+OR+%23marshall_steven+OR+%23PeterGutwein+OR+%23ABarrMLA+OR+%23fanniebay+OR+%23DanielAndrews+OR+%23MarkMcGowan+OR+%23Annastacia&count=1000&until=2020-05-26&include_entities=True&lang=en HTTP/1.1" 200 456699
-05/26/2020 10:46:32 AM found 100 tweets
-05/26/2020 10:46:32 AM saving tweet with id 1265069971429683200
-05/26/2020 10:46:32 AM writing tweet to database
-05/26/2020 10:46:32 AM saving tweet with id 1265069942925221888
-05/26/2020 10:46:32 AM writing tweet to database
-05/26/2020 10:46:32 AM saving tweet with id 1265069683889205248
-05/26/2020 10:46:32 AM writing tweet to database
-05/26/2020 10:46:32 AM saving tweet with id 1265069546483748864
-05/26/2020 10:46:32 AM writing tweet to database
-05/26/2020 10:46:32 AM saving tweet with id 1265069464162234369
-05/26/2020 10:46:32 AM writing tweet to database
-05/26/2020 10:46:32 AM saving tweet with id 1265069402795335680
-05/26/2020 10:46:32 AM writing tweet to database
-05/26/2020 10:46:32 AM saving tweet with id 1265069388111085569
-05/26/2020 10:46:32 AM writing tweet to database
-05/26/2020 10:46:32 AM saving tweet with id 1265068990663032832
-05/26/2020 10:46:32 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265068862774497280
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265068790842191874
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265068716540084225
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265068421223309312
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265068416458608640
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265068260711530497
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265068203870314496
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265068128859418625
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265068060911661056
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265068037834604544
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265068000043913217
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265067962781728768
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265067895718965248
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265067867474558978
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265067713568796672
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265067627472236544
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265067451848392705
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265067400971431936
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265067385284780034
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265067316057788416
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265067302799589381
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265067294218088448
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265067276098695168
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265067244217761793
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265066966789718018
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265066810493112320
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265066783280521216
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265066767837265922
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265066756604715008
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265066695749558272
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265066683594489856
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265066651738726401
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265066651067637761
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265066621695135744
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265066487196184577
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265066401473032192
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265066389896704001
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265066329993670656
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265066226583130113
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265066113676611584
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265065981178605569
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265065575388114945
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265065563346186241
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265065535643037697
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265065384031342592
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265065315282501632
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265065305736228864
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265065260152549376
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265065229433499649
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265064944048812032
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265064848624218112
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265064743389163520
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265064589416452102
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265064489960894465
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265064480901173248
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265064243512045568
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265064227892420608
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265064155444178944
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265064071470084097
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265063756406513664
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265063703956709376
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265063193744834560
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265063120709365761
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265063087708626944
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265062947581091840
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265062864772935680
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265062719536812032
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265062447452282880
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265062442624671749
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265062332838711297
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265062100981841920
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265061997453832192
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265061958681718785
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265061731270709253
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265061606100054016
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265061541088333825
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265061233016725504
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265060765683183618
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265060649056342017
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265060523084664832
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265060434249310208
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265060191311065088
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265060145798590466
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265060088353566725
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265060024772177927
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265060002080808960
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265059970208288768
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265059914357116928
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265059722371256325
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265059677689143297
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265059485334171648
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM saving tweet with id 1265059471987859456
-05/26/2020 10:46:33 AM writing tweet to database
-05/26/2020 10:46:33 AM rate limit remaining for SAG is 149
-05/26/2020 10:46:33 AM PARAMS: {'q': b'@AnnastaciaMP OR @GladysB OR @MarkMcGowanMP OR @marshall_steven OR @PeterGutwein OR @ABarrMLA OR @fanniebay OR @DanielAndrews OR #AnnastaciaMP OR #GladysB OR #MarkMcGowanMP OR #marshall_steven OR #PeterGutwein OR #ABarrMLA OR #fanniebay OR #DanielAndrews OR #MarkMcGowan OR #Annastacia', 'count': b'1000', 'until': b'2020-05-26', 'include_entities': b'True', 'lang': b'en', 'since_id': b'1265069971429683200', 'max_id': b'1265059471987859456'}
-05/26/2020 10:46:33 AM Signing request <PreparedRequest [GET]> using client <Client client_key=n4IgjuZTLvAa9WXpJx7W0skch, client_secret=****, resource_owner_key=1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
-05/26/2020 10:46:33 AM Including body in call to sign: False
-05/26/2020 10:46:33 AM Collected params: [('q', '@AnnastaciaMP OR @GladysB OR @MarkMcGowanMP OR @marshall_steven OR @PeterGutwein OR @ABarrMLA OR @fanniebay OR @DanielAndrews OR #AnnastaciaMP OR #GladysB OR #MarkMcGowanMP OR #marshall_steven OR #PeterGutwein OR #ABarrMLA OR #fanniebay OR #DanielAndrews OR #MarkMcGowan OR #Annastacia'), ('count', '1000'), ('until', '2020-05-26'), ('include_entities', 'True'), ('lang', 'en'), ('since_id', '1265069971429683200'), ('max_id', '1265059471987859456'), ('oauth_nonce', '27867361652817358391590453993'), ('oauth_timestamp', '1590453993'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'n4IgjuZTLvAa9WXpJx7W0skch'), ('oauth_token', '1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf')]
-05/26/2020 10:46:33 AM Normalized params: count=1000&include_entities=True&lang=en&max_id=1265059471987859456&oauth_consumer_key=n4IgjuZTLvAa9WXpJx7W0skch&oauth_nonce=27867361652817358391590453993&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1590453993&oauth_token=1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf&oauth_version=1.0&q=%40AnnastaciaMP%20OR%20%40GladysB%20OR%20%40MarkMcGowanMP%20OR%20%40marshall_steven%20OR%20%40PeterGutwein%20OR%20%40ABarrMLA%20OR%20%40fanniebay%20OR%20%40DanielAndrews%20OR%20%23AnnastaciaMP%20OR%20%23GladysB%20OR%20%23MarkMcGowanMP%20OR%20%23marshall_steven%20OR%20%23PeterGutwein%20OR%20%23ABarrMLA%20OR%20%23fanniebay%20OR%20%23DanielAndrews%20OR%20%23MarkMcGowan%20OR%20%23Annastacia&since_id=1265069971429683200&until=2020-05-26
-05/26/2020 10:46:33 AM Normalized URI: https://api.twitter.com/1.1/search/tweets.json
-05/26/2020 10:46:33 AM Signing: signature base string: GET&https%3A%2F%2Fapi.twitter.com%2F1.1%2Fsearch%2Ftweets.json&count%3D1000%26include_entities%3DTrue%26lang%3Den%26max_id%3D1265059471987859456%26oauth_consumer_key%3Dn4IgjuZTLvAa9WXpJx7W0skch%26oauth_nonce%3D27867361652817358391590453993%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1590453993%26oauth_token%3D1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf%26oauth_version%3D1.0%26q%3D%2540AnnastaciaMP%2520OR%2520%2540GladysB%2520OR%2520%2540MarkMcGowanMP%2520OR%2520%2540marshall_steven%2520OR%2520%2540PeterGutwein%2520OR%2520%2540ABarrMLA%2520OR%2520%2540fanniebay%2520OR%2520%2540DanielAndrews%2520OR%2520%2523AnnastaciaMP%2520OR%2520%2523GladysB%2520OR%2520%2523MarkMcGowanMP%2520OR%2520%2523marshall_steven%2520OR%2520%2523PeterGutwein%2520OR%2520%2523ABarrMLA%2520OR%2520%2523fanniebay%2520OR%2520%2523DanielAndrews%2520OR%2520%2523MarkMcGowan%2520OR%2520%2523Annastacia%26since_id%3D1265069971429683200%26until%3D2020-05-26
-05/26/2020 10:46:33 AM Signature: jKAGS6V6Eo4Lwq6cfUTJojKdC3A=
-05/26/2020 10:46:33 AM Updated url: https://api.twitter.com/1.1/search/tweets.json?q=%40AnnastaciaMP+OR+%40GladysB+OR+%40MarkMcGowanMP+OR+%40marshall_steven+OR+%40PeterGutwein+OR+%40ABarrMLA+OR+%40fanniebay+OR+%40DanielAndrews+OR+%23AnnastaciaMP+OR+%23GladysB+OR+%23MarkMcGowanMP+OR+%23marshall_steven+OR+%23PeterGutwein+OR+%23ABarrMLA+OR+%23fanniebay+OR+%23DanielAndrews+OR+%23MarkMcGowan+OR+%23Annastacia&count=1000&until=2020-05-26&include_entities=True&lang=en&since_id=1265069971429683200&max_id=1265059471987859456
-05/26/2020 10:46:33 AM Updated headers: {'Host': 'api.twitter.com', 'Authorization': 'OAuth oauth_nonce="27867361652817358391590453993", oauth_timestamp="1590453993", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="n4IgjuZTLvAa9WXpJx7W0skch", oauth_token="1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf", oauth_signature="jKAGS6V6Eo4Lwq6cfUTJojKdC3A%3D"'}
-05/26/2020 10:46:33 AM Updated body: None
-05/26/2020 10:46:33 AM Starting new HTTPS connection (1): api.twitter.com:443
-05/26/2020 10:46:34 AM https://api.twitter.com:443 "GET /1.1/search/tweets.json?q=%40AnnastaciaMP+OR+%40GladysB+OR+%40MarkMcGowanMP+OR+%40marshall_steven+OR+%40PeterGutwein+OR+%40ABarrMLA+OR+%40fanniebay+OR+%40DanielAndrews+OR+%23AnnastaciaMP+OR+%23GladysB+OR+%23MarkMcGowanMP+OR+%23marshall_steven+OR+%23PeterGutwein+OR+%23ABarrMLA+OR+%23fanniebay+OR+%23DanielAndrews+OR+%23MarkMcGowan+OR+%23Annastacia&count=1000&until=2020-05-26&include_entities=True&lang=en&since_id=1265069971429683200&max_id=1265059471987859456 HTTP/1.1" 403 71
-05/26/2020 10:46:34 AM scraping with user SHE
-05/26/2020 10:46:34 AM PARAMS: {'q': b'@AnnastaciaMP OR @GladysB OR @MarkMcGowanMP OR @marshall_steven OR @PeterGutwein OR @ABarrMLA OR @fanniebay OR @DanielAndrews OR #AnnastaciaMP OR #GladysB OR #MarkMcGowanMP OR #marshall_steven OR #PeterGutwein OR #ABarrMLA OR #fanniebay OR #DanielAndrews OR #MarkMcGowan OR #Annastacia', 'count': b'1000', 'until': b'2020-05-26', 'include_entities': b'True', 'lang': b'en', 'since_id': b'1265069971429683200', 'max_id': b'1265059471987859456'}
-05/26/2020 10:46:34 AM Signing request <PreparedRequest [GET]> using client <Client client_key=IbVf6OKF149LvIaBaHLqATMcy, client_secret=****, resource_owner_key=1251775148274839553-5XmofQVNiy09bCUchneleCfECGbrZ0, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
-05/26/2020 10:46:34 AM Including body in call to sign: False
-05/26/2020 10:46:34 AM Collected params: [('q', '@AnnastaciaMP OR @GladysB OR @MarkMcGowanMP OR @marshall_steven OR @PeterGutwein OR @ABarrMLA OR @fanniebay OR @DanielAndrews OR #AnnastaciaMP OR #GladysB OR #MarkMcGowanMP OR #marshall_steven OR #PeterGutwein OR #ABarrMLA OR #fanniebay OR #DanielAndrews OR #MarkMcGowan OR #Annastacia'), ('count', '1000'), ('until', '2020-05-26'), ('include_entities', 'True'), ('lang', 'en'), ('since_id', '1265069971429683200'), ('max_id', '1265059471987859456'), ('oauth_nonce', '37585029637102699831590453994'), ('oauth_timestamp', '1590453994'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'IbVf6OKF149LvIaBaHLqATMcy'), ('oauth_token', '1251775148274839553-5XmofQVNiy09bCUchneleCfECGbrZ0')]
-05/26/2020 10:46:34 AM Normalized params: count=1000&include_entities=True&lang=en&max_id=1265059471987859456&oauth_consumer_key=IbVf6OKF149LvIaBaHLqATMcy&oauth_nonce=37585029637102699831590453994&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1590453994&oauth_token=1251775148274839553-5XmofQVNiy09bCUchneleCfECGbrZ0&oauth_version=1.0&q=%40AnnastaciaMP%20OR%20%40GladysB%20OR%20%40MarkMcGowanMP%20OR%20%40marshall_steven%20OR%20%40PeterGutwein%20OR%20%40ABarrMLA%20OR%20%40fanniebay%20OR%20%40DanielAndrews%20OR%20%23AnnastaciaMP%20OR%20%23GladysB%20OR%20%23MarkMcGowanMP%20OR%20%23marshall_steven%20OR%20%23PeterGutwein%20OR%20%23ABarrMLA%20OR%20%23fanniebay%20OR%20%23DanielAndrews%20OR%20%23MarkMcGowan%20OR%20%23Annastacia&since_id=1265069971429683200&until=2020-05-26
-05/26/2020 10:46:34 AM Normalized URI: https://api.twitter.com/1.1/search/tweets.json
-05/26/2020 10:46:34 AM Signing: signature base string: GET&https%3A%2F%2Fapi.twitter.com%2F1.1%2Fsearch%2Ftweets.json&count%3D1000%26include_entities%3DTrue%26lang%3Den%26max_id%3D1265059471987859456%26oauth_consumer_key%3DIbVf6OKF149LvIaBaHLqATMcy%26oauth_nonce%3D37585029637102699831590453994%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1590453994%26oauth_token%3D1251775148274839553-5XmofQVNiy09bCUchneleCfECGbrZ0%26oauth_version%3D1.0%26q%3D%2540AnnastaciaMP%2520OR%2520%2540GladysB%2520OR%2520%2540MarkMcGowanMP%2520OR%2520%2540marshall_steven%2520OR%2520%2540PeterGutwein%2520OR%2520%2540ABarrMLA%2520OR%2520%2540fanniebay%2520OR%2520%2540DanielAndrews%2520OR%2520%2523AnnastaciaMP%2520OR%2520%2523GladysB%2520OR%2520%2523MarkMcGowanMP%2520OR%2520%2523marshall_steven%2520OR%2520%2523PeterGutwein%2520OR%2520%2523ABarrMLA%2520OR%2520%2523fanniebay%2520OR%2520%2523DanielAndrews%2520OR%2520%2523MarkMcGowan%2520OR%2520%2523Annastacia%26since_id%3D1265069971429683200%26until%3D2020-05-26
-05/26/2020 10:46:34 AM Signature: 1oLZWq4Xm/1tNMcwGF5pm4E06sQ=
-05/26/2020 10:46:34 AM Updated url: https://api.twitter.com/1.1/search/tweets.json?q=%40AnnastaciaMP+OR+%40GladysB+OR+%40MarkMcGowanMP+OR+%40marshall_steven+OR+%40PeterGutwein+OR+%40ABarrMLA+OR+%40fanniebay+OR+%40DanielAndrews+OR+%23AnnastaciaMP+OR+%23GladysB+OR+%23MarkMcGowanMP+OR+%23marshall_steven+OR+%23PeterGutwein+OR+%23ABarrMLA+OR+%23fanniebay+OR+%23DanielAndrews+OR+%23MarkMcGowan+OR+%23Annastacia&count=1000&until=2020-05-26&include_entities=True&lang=en&since_id=1265069971429683200&max_id=1265059471987859456
-05/26/2020 10:46:34 AM Updated headers: {'Host': 'api.twitter.com', 'Authorization': 'OAuth oauth_nonce="37585029637102699831590453994", oauth_timestamp="1590453994", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="IbVf6OKF149LvIaBaHLqATMcy", oauth_token="1251775148274839553-5XmofQVNiy09bCUchneleCfECGbrZ0", oauth_signature="1oLZWq4Xm%2F1tNMcwGF5pm4E06sQ%3D"'}
-05/26/2020 10:46:34 AM Updated body: None
-05/26/2020 10:46:34 AM Starting new HTTPS connection (1): api.twitter.com:443
-05/26/2020 10:46:34 AM https://api.twitter.com:443 "GET /1.1/search/tweets.json?q=%40AnnastaciaMP+OR+%40GladysB+OR+%40MarkMcGowanMP+OR+%40marshall_steven+OR+%40PeterGutwein+OR+%40ABarrMLA+OR+%40fanniebay+OR+%40DanielAndrews+OR+%23AnnastaciaMP+OR+%23GladysB+OR+%23MarkMcGowanMP+OR+%23marshall_steven+OR+%23PeterGutwein+OR+%23ABarrMLA+OR+%23fanniebay+OR+%23DanielAndrews+OR+%23MarkMcGowan+OR+%23Annastacia&count=1000&until=2020-05-26&include_entities=True&lang=en&since_id=1265069971429683200&max_id=1265059471987859456 HTTP/1.1" 403 71
-05/26/2020 10:46:34 AM scraping with user SHA
-05/26/2020 10:46:34 AM PARAMS: {'q': b'@AnnastaciaMP OR @GladysB OR @MarkMcGowanMP OR @marshall_steven OR @PeterGutwein OR @ABarrMLA OR @fanniebay OR @DanielAndrews OR #AnnastaciaMP OR #GladysB OR #MarkMcGowanMP OR #marshall_steven OR #PeterGutwein OR #ABarrMLA OR #fanniebay OR #DanielAndrews OR #MarkMcGowan OR #Annastacia', 'count': b'1000', 'until': b'2020-05-26', 'include_entities': b'True', 'lang': b'en', 'since_id': b'1265069971429683200', 'max_id': b'1265059471987859456'}
-05/26/2020 10:46:34 AM Signing request <PreparedRequest [GET]> using client <Client client_key=s5JcGUsQsZbzztZglsKOAxp1g, client_secret=****, resource_owner_key=1254385776176934913-uHCfy7ktByNDqHoXdDBLLtENXO6OkP, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
-05/26/2020 10:46:34 AM Including body in call to sign: False
-05/26/2020 10:46:34 AM Collected params: [('q', '@AnnastaciaMP OR @GladysB OR @MarkMcGowanMP OR @marshall_steven OR @PeterGutwein OR @ABarrMLA OR @fanniebay OR @DanielAndrews OR #AnnastaciaMP OR #GladysB OR #MarkMcGowanMP OR #marshall_steven OR #PeterGutwein OR #ABarrMLA OR #fanniebay OR #DanielAndrews OR #MarkMcGowan OR #Annastacia'), ('count', '1000'), ('until', '2020-05-26'), ('include_entities', 'True'), ('lang', 'en'), ('since_id', '1265069971429683200'), ('max_id', '1265059471987859456'), ('oauth_nonce', '159952145449906522781590453994'), ('oauth_timestamp', '1590453994'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 's5JcGUsQsZbzztZglsKOAxp1g'), ('oauth_token', '1254385776176934913-uHCfy7ktByNDqHoXdDBLLtENXO6OkP')]
-05/26/2020 10:46:34 AM Normalized params: count=1000&include_entities=True&lang=en&max_id=1265059471987859456&oauth_consumer_key=s5JcGUsQsZbzztZglsKOAxp1g&oauth_nonce=159952145449906522781590453994&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1590453994&oauth_token=1254385776176934913-uHCfy7ktByNDqHoXdDBLLtENXO6OkP&oauth_version=1.0&q=%40AnnastaciaMP%20OR%20%40GladysB%20OR%20%40MarkMcGowanMP%20OR%20%40marshall_steven%20OR%20%40PeterGutwein%20OR%20%40ABarrMLA%20OR%20%40fanniebay%20OR%20%40DanielAndrews%20OR%20%23AnnastaciaMP%20OR%20%23GladysB%20OR%20%23MarkMcGowanMP%20OR%20%23marshall_steven%20OR%20%23PeterGutwein%20OR%20%23ABarrMLA%20OR%20%23fanniebay%20OR%20%23DanielAndrews%20OR%20%23MarkMcGowan%20OR%20%23Annastacia&since_id=1265069971429683200&until=2020-05-26
-05/26/2020 10:46:34 AM Normalized URI: https://api.twitter.com/1.1/search/tweets.json
-05/26/2020 10:46:34 AM Signing: signature base string: GET&https%3A%2F%2Fapi.twitter.com%2F1.1%2Fsearch%2Ftweets.json&count%3D1000%26include_entities%3DTrue%26lang%3Den%26max_id%3D1265059471987859456%26oauth_consumer_key%3Ds5JcGUsQsZbzztZglsKOAxp1g%26oauth_nonce%3D159952145449906522781590453994%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1590453994%26oauth_token%3D1254385776176934913-uHCfy7ktByNDqHoXdDBLLtENXO6OkP%26oauth_version%3D1.0%26q%3D%2540AnnastaciaMP%2520OR%2520%2540GladysB%2520OR%2520%2540MarkMcGowanMP%2520OR%2520%2540marshall_steven%2520OR%2520%2540PeterGutwein%2520OR%2520%2540ABarrMLA%2520OR%2520%2540fanniebay%2520OR%2520%2540DanielAndrews%2520OR%2520%2523AnnastaciaMP%2520OR%2520%2523GladysB%2520OR%2520%2523MarkMcGowanMP%2520OR%2520%2523marshall_steven%2520OR%2520%2523PeterGutwein%2520OR%2520%2523ABarrMLA%2520OR%2520%2523fanniebay%2520OR%2520%2523DanielAndrews%2520OR%2520%2523MarkMcGowan%2520OR%2520%2523Annastacia%26since_id%3D1265069971429683200%26until%3D2020-05-26
-05/26/2020 10:46:34 AM Signature: jYYnwUpAOSTdrD8+K4K45CNAW1M=
-05/26/2020 10:46:34 AM Updated url: https://api.twitter.com/1.1/search/tweets.json?q=%40AnnastaciaMP+OR+%40GladysB+OR+%40MarkMcGowanMP+OR+%40marshall_steven+OR+%40PeterGutwein+OR+%40ABarrMLA+OR+%40fanniebay+OR+%40DanielAndrews+OR+%23AnnastaciaMP+OR+%23GladysB+OR+%23MarkMcGowanMP+OR+%23marshall_steven+OR+%23PeterGutwein+OR+%23ABarrMLA+OR+%23fanniebay+OR+%23DanielAndrews+OR+%23MarkMcGowan+OR+%23Annastacia&count=1000&until=2020-05-26&include_entities=True&lang=en&since_id=1265069971429683200&max_id=1265059471987859456
-05/26/2020 10:46:34 AM Updated headers: {'Host': 'api.twitter.com', 'Authorization': 'OAuth oauth_nonce="159952145449906522781590453994", oauth_timestamp="1590453994", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="s5JcGUsQsZbzztZglsKOAxp1g", oauth_token="1254385776176934913-uHCfy7ktByNDqHoXdDBLLtENXO6OkP", oauth_signature="jYYnwUpAOSTdrD8%2BK4K45CNAW1M%3D"'}
-05/26/2020 10:46:34 AM Updated body: None
-05/26/2020 10:46:34 AM Starting new HTTPS connection (1): api.twitter.com:443
-05/26/2020 10:46:35 AM https://api.twitter.com:443 "GET /1.1/search/tweets.json?q=%40AnnastaciaMP+OR+%40GladysB+OR+%40MarkMcGowanMP+OR+%40marshall_steven+OR+%40PeterGutwein+OR+%40ABarrMLA+OR+%40fanniebay+OR+%40DanielAndrews+OR+%23AnnastaciaMP+OR+%23GladysB+OR+%23MarkMcGowanMP+OR+%23marshall_steven+OR+%23PeterGutwein+OR+%23ABarrMLA+OR+%23fanniebay+OR+%23DanielAndrews+OR+%23MarkMcGowan+OR+%23Annastacia&count=1000&until=2020-05-26&include_entities=True&lang=en&since_id=1265069971429683200&max_id=1265059471987859456 HTTP/1.1" 403 71
-05/26/2020 10:46:35 AM scraping with user VIS
-05/26/2020 10:46:35 AM PARAMS: {'q': b'@AnnastaciaMP OR @GladysB OR @MarkMcGowanMP OR @marshall_steven OR @PeterGutwein OR @ABarrMLA OR @fanniebay OR @DanielAndrews OR #AnnastaciaMP OR #GladysB OR #MarkMcGowanMP OR #marshall_steven OR #PeterGutwein OR #ABarrMLA OR #fanniebay OR #DanielAndrews OR #MarkMcGowan OR #Annastacia', 'count': b'1000', 'until': b'2020-05-26', 'include_entities': b'True', 'lang': b'en', 'since_id': b'1265069971429683200', 'max_id': b'1265059471987859456'}
-05/26/2020 10:46:35 AM Signing request <PreparedRequest [GET]> using client <Client client_key=xX6K54mGcfcRrukhOkAQ9Uw8H, client_secret=****, resource_owner_key=1254680534963240963-JE09HbFoivaeSMHOu1vbGSWbXKqOjG, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
-05/26/2020 10:46:35 AM Including body in call to sign: False
-05/26/2020 10:46:35 AM Collected params: [('q', '@AnnastaciaMP OR @GladysB OR @MarkMcGowanMP OR @marshall_steven OR @PeterGutwein OR @ABarrMLA OR @fanniebay OR @DanielAndrews OR #AnnastaciaMP OR #GladysB OR #MarkMcGowanMP OR #marshall_steven OR #PeterGutwein OR #ABarrMLA OR #fanniebay OR #DanielAndrews OR #MarkMcGowan OR #Annastacia'), ('count', '1000'), ('until', '2020-05-26'), ('include_entities', 'True'), ('lang', 'en'), ('since_id', '1265069971429683200'), ('max_id', '1265059471987859456'), ('oauth_nonce', '36414927389927784651590453995'), ('oauth_timestamp', '1590453995'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'xX6K54mGcfcRrukhOkAQ9Uw8H'), ('oauth_token', '1254680534963240963-JE09HbFoivaeSMHOu1vbGSWbXKqOjG')]
-05/26/2020 10:46:35 AM Normalized params: count=1000&include_entities=True&lang=en&max_id=1265059471987859456&oauth_consumer_key=xX6K54mGcfcRrukhOkAQ9Uw8H&oauth_nonce=36414927389927784651590453995&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1590453995&oauth_token=1254680534963240963-JE09HbFoivaeSMHOu1vbGSWbXKqOjG&oauth_version=1.0&q=%40AnnastaciaMP%20OR%20%40GladysB%20OR%20%40MarkMcGowanMP%20OR%20%40marshall_steven%20OR%20%40PeterGutwein%20OR%20%40ABarrMLA%20OR%20%40fanniebay%20OR%20%40DanielAndrews%20OR%20%23AnnastaciaMP%20OR%20%23GladysB%20OR%20%23MarkMcGowanMP%20OR%20%23marshall_steven%20OR%20%23PeterGutwein%20OR%20%23ABarrMLA%20OR%20%23fanniebay%20OR%20%23DanielAndrews%20OR%20%23MarkMcGowan%20OR%20%23Annastacia&since_id=1265069971429683200&until=2020-05-26
-05/26/2020 10:46:35 AM Normalized URI: https://api.twitter.com/1.1/search/tweets.json
-05/26/2020 10:46:35 AM Signing: signature base string: GET&https%3A%2F%2Fapi.twitter.com%2F1.1%2Fsearch%2Ftweets.json&count%3D1000%26include_entities%3DTrue%26lang%3Den%26max_id%3D1265059471987859456%26oauth_consumer_key%3DxX6K54mGcfcRrukhOkAQ9Uw8H%26oauth_nonce%3D36414927389927784651590453995%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1590453995%26oauth_token%3D1254680534963240963-JE09HbFoivaeSMHOu1vbGSWbXKqOjG%26oauth_version%3D1.0%26q%3D%2540AnnastaciaMP%2520OR%2520%2540GladysB%2520OR%2520%2540MarkMcGowanMP%2520OR%2520%2540marshall_steven%2520OR%2520%2540PeterGutwein%2520OR%2520%2540ABarrMLA%2520OR%2520%2540fanniebay%2520OR%2520%2540DanielAndrews%2520OR%2520%2523AnnastaciaMP%2520OR%2520%2523GladysB%2520OR%2520%2523MarkMcGowanMP%2520OR%2520%2523marshall_steven%2520OR%2520%2523PeterGutwein%2520OR%2520%2523ABarrMLA%2520OR%2520%2523fanniebay%2520OR%2520%2523DanielAndrews%2520OR%2520%2523MarkMcGowan%2520OR%2520%2523Annastacia%26since_id%3D1265069971429683200%26until%3D2020-05-26
-05/26/2020 10:46:35 AM Signature: YFYTnNNtceFbXyoLTSqdapIZeb4=
-05/26/2020 10:46:35 AM Updated url: https://api.twitter.com/1.1/search/tweets.json?q=%40AnnastaciaMP+OR+%40GladysB+OR+%40MarkMcGowanMP+OR+%40marshall_steven+OR+%40PeterGutwein+OR+%40ABarrMLA+OR+%40fanniebay+OR+%40DanielAndrews+OR+%23AnnastaciaMP+OR+%23GladysB+OR+%23MarkMcGowanMP+OR+%23marshall_steven+OR+%23PeterGutwein+OR+%23ABarrMLA+OR+%23fanniebay+OR+%23DanielAndrews+OR+%23MarkMcGowan+OR+%23Annastacia&count=1000&until=2020-05-26&include_entities=True&lang=en&since_id=1265069971429683200&max_id=1265059471987859456
-05/26/2020 10:46:35 AM Updated headers: {'Host': 'api.twitter.com', 'Authorization': 'OAuth oauth_nonce="36414927389927784651590453995", oauth_timestamp="1590453995", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="xX6K54mGcfcRrukhOkAQ9Uw8H", oauth_token="1254680534963240963-JE09HbFoivaeSMHOu1vbGSWbXKqOjG", oauth_signature="YFYTnNNtceFbXyoLTSqdapIZeb4%3D"'}
-05/26/2020 10:46:35 AM Updated body: None
-05/26/2020 10:46:35 AM Starting new HTTPS connection (1): api.twitter.com:443
-05/26/2020 10:46:35 AM https://api.twitter.com:443 "GET /1.1/search/tweets.json?q=%40AnnastaciaMP+OR+%40GladysB+OR+%40MarkMcGowanMP+OR+%40marshall_steven+OR+%40PeterGutwein+OR+%40ABarrMLA+OR+%40fanniebay+OR+%40DanielAndrews+OR+%23AnnastaciaMP+OR+%23GladysB+OR+%23MarkMcGowanMP+OR+%23marshall_steven+OR+%23PeterGutwein+OR+%23ABarrMLA+OR+%23fanniebay+OR+%23DanielAndrews+OR+%23MarkMcGowan+OR+%23Annastacia&count=1000&until=2020-05-26&include_entities=True&lang=en&since_id=1265069971429683200&max_id=1265059471987859456 HTTP/1.1" 403 71
-05/26/2020 10:46:35 AM scraping with user RUD
-05/26/2020 10:46:35 AM PARAMS: {'q': b'@AnnastaciaMP OR @GladysB OR @MarkMcGowanMP OR @marshall_steven OR @PeterGutwein OR @ABarrMLA OR @fanniebay OR @DanielAndrews OR #AnnastaciaMP OR #GladysB OR #MarkMcGowanMP OR #marshall_steven OR #PeterGutwein OR #ABarrMLA OR #fanniebay OR #DanielAndrews OR #MarkMcGowan OR #Annastacia', 'count': b'1000', 'until': b'2020-05-26', 'include_entities': b'True', 'lang': b'en', 'since_id': b'1265069971429683200', 'max_id': b'1265059471987859456'}
-05/26/2020 10:46:35 AM Signing request <PreparedRequest [GET]> using client <Client client_key=YiYRZRnFw6BmZ62JUQuRrJJ1V, client_secret=****, resource_owner_key=132562597-zU3Z7EHp4Q3vJiXvKseL2ucVqALYldbI5B5l8IR0, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
-05/26/2020 10:46:35 AM Including body in call to sign: False
-05/26/2020 10:46:35 AM Collected params: [('q', '@AnnastaciaMP OR @GladysB OR @MarkMcGowanMP OR @marshall_steven OR @PeterGutwein OR @ABarrMLA OR @fanniebay OR @DanielAndrews OR #AnnastaciaMP OR #GladysB OR #MarkMcGowanMP OR #marshall_steven OR #PeterGutwein OR #ABarrMLA OR #fanniebay OR #DanielAndrews OR #MarkMcGowan OR #Annastacia'), ('count', '1000'), ('until', '2020-05-26'), ('include_entities', 'True'), ('lang', 'en'), ('since_id', '1265069971429683200'), ('max_id', '1265059471987859456'), ('oauth_nonce', '145248079071777483701590453995'), ('oauth_timestamp', '1590453995'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'YiYRZRnFw6BmZ62JUQuRrJJ1V'), ('oauth_token', '132562597-zU3Z7EHp4Q3vJiXvKseL2ucVqALYldbI5B5l8IR0')]
-05/26/2020 10:46:35 AM Normalized params: count=1000&include_entities=True&lang=en&max_id=1265059471987859456&oauth_consumer_key=YiYRZRnFw6BmZ62JUQuRrJJ1V&oauth_nonce=145248079071777483701590453995&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1590453995&oauth_token=132562597-zU3Z7EHp4Q3vJiXvKseL2ucVqALYldbI5B5l8IR0&oauth_version=1.0&q=%40AnnastaciaMP%20OR%20%40GladysB%20OR%20%40MarkMcGowanMP%20OR%20%40marshall_steven%20OR%20%40PeterGutwein%20OR%20%40ABarrMLA%20OR%20%40fanniebay%20OR%20%40DanielAndrews%20OR%20%23AnnastaciaMP%20OR%20%23GladysB%20OR%20%23MarkMcGowanMP%20OR%20%23marshall_steven%20OR%20%23PeterGutwein%20OR%20%23ABarrMLA%20OR%20%23fanniebay%20OR%20%23DanielAndrews%20OR%20%23MarkMcGowan%20OR%20%23Annastacia&since_id=1265069971429683200&until=2020-05-26
-05/26/2020 10:46:35 AM Normalized URI: https://api.twitter.com/1.1/search/tweets.json
-05/26/2020 10:46:35 AM Signing: signature base string: GET&https%3A%2F%2Fapi.twitter.com%2F1.1%2Fsearch%2Ftweets.json&count%3D1000%26include_entities%3DTrue%26lang%3Den%26max_id%3D1265059471987859456%26oauth_consumer_key%3DYiYRZRnFw6BmZ62JUQuRrJJ1V%26oauth_nonce%3D145248079071777483701590453995%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1590453995%26oauth_token%3D132562597-zU3Z7EHp4Q3vJiXvKseL2ucVqALYldbI5B5l8IR0%26oauth_version%3D1.0%26q%3D%2540AnnastaciaMP%2520OR%2520%2540GladysB%2520OR%2520%2540MarkMcGowanMP%2520OR%2520%2540marshall_steven%2520OR%2520%2540PeterGutwein%2520OR%2520%2540ABarrMLA%2520OR%2520%2540fanniebay%2520OR%2520%2540DanielAndrews%2520OR%2520%2523AnnastaciaMP%2520OR%2520%2523GladysB%2520OR%2520%2523MarkMcGowanMP%2520OR%2520%2523marshall_steven%2520OR%2520%2523PeterGutwein%2520OR%2520%2523ABarrMLA%2520OR%2520%2523fanniebay%2520OR%2520%2523DanielAndrews%2520OR%2520%2523MarkMcGowan%2520OR%2520%2523Annastacia%26since_id%3D1265069971429683200%26until%3D2020-05-26
-05/26/2020 10:46:35 AM Signature: evKRre07r01eFB0ILIDfWOZfqjc=
-05/26/2020 10:46:35 AM Updated url: https://api.twitter.com/1.1/search/tweets.json?q=%40AnnastaciaMP+OR+%40GladysB+OR+%40MarkMcGowanMP+OR+%40marshall_steven+OR+%40PeterGutwein+OR+%40ABarrMLA+OR+%40fanniebay+OR+%40DanielAndrews+OR+%23AnnastaciaMP+OR+%23GladysB+OR+%23MarkMcGowanMP+OR+%23marshall_steven+OR+%23PeterGutwein+OR+%23ABarrMLA+OR+%23fanniebay+OR+%23DanielAndrews+OR+%23MarkMcGowan+OR+%23Annastacia&count=1000&until=2020-05-26&include_entities=True&lang=en&since_id=1265069971429683200&max_id=1265059471987859456
-05/26/2020 10:46:35 AM Updated headers: {'Host': 'api.twitter.com', 'Authorization': 'OAuth oauth_nonce="145248079071777483701590453995", oauth_timestamp="1590453995", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="YiYRZRnFw6BmZ62JUQuRrJJ1V", oauth_token="132562597-zU3Z7EHp4Q3vJiXvKseL2ucVqALYldbI5B5l8IR0", oauth_signature="evKRre07r01eFB0ILIDfWOZfqjc%3D"'}
-05/26/2020 10:46:35 AM Updated body: None
-05/26/2020 10:46:35 AM Starting new HTTPS connection (1): api.twitter.com:443
-05/26/2020 10:46:36 AM https://api.twitter.com:443 "GET /1.1/search/tweets.json?q=%40AnnastaciaMP+OR+%40GladysB+OR+%40MarkMcGowanMP+OR+%40marshall_steven+OR+%40PeterGutwein+OR+%40ABarrMLA+OR+%40fanniebay+OR+%40DanielAndrews+OR+%23AnnastaciaMP+OR+%23GladysB+OR+%23MarkMcGowanMP+OR+%23marshall_steven+OR+%23PeterGutwein+OR+%23ABarrMLA+OR+%23fanniebay+OR+%23DanielAndrews+OR+%23MarkMcGowan+OR+%23Annastacia&count=1000&until=2020-05-26&include_entities=True&lang=en&since_id=1265069971429683200&max_id=1265059471987859456 HTTP/1.1" 403 71
-05/26/2020 10:46:36 AM sleeping
+05/27/2020 03:58:00 PM scraping with user SAG
+05/27/2020 03:58:00 PM using query @DanielAndrewsMP OR @DanielAndrews OR #DanielAndrews OR DanielAndrewsMP OR #vicpremier 
+05/27/2020 03:58:00 PM PARAMS: {'q': b'@DanielAndrewsMP OR @DanielAndrews OR #DanielAndrews OR DanielAndrewsMP OR #vicpremier ', 'count': b'1000', 'include_entities': b'True', 'tweet_mode': b'extended'}
+05/27/2020 03:58:00 PM Signing request <PreparedRequest [GET]> using client <Client client_key=n4IgjuZTLvAa9WXpJx7W0skch, client_secret=****, resource_owner_key=1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
+05/27/2020 03:58:00 PM Including body in call to sign: False
+05/27/2020 03:58:00 PM Collected params: [('q', '@DanielAndrewsMP OR @DanielAndrews OR #DanielAndrews OR DanielAndrewsMP OR #vicpremier '), ('count', '1000'), ('include_entities', 'True'), ('tweet_mode', 'extended'), ('oauth_nonce', '63169807513779084621590559080'), ('oauth_timestamp', '1590559080'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'n4IgjuZTLvAa9WXpJx7W0skch'), ('oauth_token', '1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf')]
+05/27/2020 03:58:00 PM Normalized params: count=1000&include_entities=True&oauth_consumer_key=n4IgjuZTLvAa9WXpJx7W0skch&oauth_nonce=63169807513779084621590559080&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1590559080&oauth_token=1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf&oauth_version=1.0&q=%40DanielAndrewsMP%20OR%20%40DanielAndrews%20OR%20%23DanielAndrews%20OR%20DanielAndrewsMP%20OR%20%23vicpremier%20&tweet_mode=extended
+05/27/2020 03:58:00 PM Normalized URI: https://api.twitter.com/1.1/search/tweets.json
+05/27/2020 03:58:00 PM Signing: signature base string: GET&https%3A%2F%2Fapi.twitter.com%2F1.1%2Fsearch%2Ftweets.json&count%3D1000%26include_entities%3DTrue%26oauth_consumer_key%3Dn4IgjuZTLvAa9WXpJx7W0skch%26oauth_nonce%3D63169807513779084621590559080%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1590559080%26oauth_token%3D1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf%26oauth_version%3D1.0%26q%3D%2540DanielAndrewsMP%2520OR%2520%2540DanielAndrews%2520OR%2520%2523DanielAndrews%2520OR%2520DanielAndrewsMP%2520OR%2520%2523vicpremier%2520%26tweet_mode%3Dextended
+05/27/2020 03:58:00 PM Signature: CwSg7mFnL0OhhUyGuirxU7+mX+M=
+05/27/2020 03:58:00 PM Updated url: https://api.twitter.com/1.1/search/tweets.json?q=%40DanielAndrewsMP+OR+%40DanielAndrews+OR+%23DanielAndrews+OR+DanielAndrewsMP+OR+%23vicpremier+&count=1000&include_entities=True&tweet_mode=extended
+05/27/2020 03:58:00 PM Updated headers: {'Host': 'api.twitter.com', 'Authorization': 'OAuth oauth_nonce="63169807513779084621590559080", oauth_timestamp="1590559080", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="n4IgjuZTLvAa9WXpJx7W0skch", oauth_token="1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf", oauth_signature="CwSg7mFnL0OhhUyGuirxU7%2BmX%2BM%3D"'}
+05/27/2020 03:58:00 PM Updated body: None
+05/27/2020 03:58:00 PM Starting new HTTPS connection (1): api.twitter.com:443
+05/27/2020 03:58:01 PM https://api.twitter.com:443 "GET /1.1/search/tweets.json?q=%40DanielAndrewsMP+OR+%40DanielAndrews+OR+%23DanielAndrews+OR+DanielAndrewsMP+OR+%23vicpremier+&count=1000&include_entities=True&tweet_mode=extended HTTP/1.1" 200 502621
+05/27/2020 03:58:02 PM PARAMS: {'create': b'True'}
+05/27/2020 03:58:02 PM saving tweet with id 1265522610542129159
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265522593739747335
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265522469705846787
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265522449858416653
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265522384246841345
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265522310653632513
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265522288901922819
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265522242076770305
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265522230127198209
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265522208111296514
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265522202692259840
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265522146329210882
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265522139823775747
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265522076863148032
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265521889105108992
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265521696037093376
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265521626550095880
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265521621814689794
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265521616328577030
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265521408119115777
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265521399357210624
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265521354029379586
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265521286370951168
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265521255685468163
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265521216544296962
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265521166762094592
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265521048377856006
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265520860435275777
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265520822019600386
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265520758798811137
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265520755602870278
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265520674220789760
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265520658353618944
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265520542599217157
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265520335752921088
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265520280375570432
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265520050750001152
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265520042101346311
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265520041950351361
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265519884634595328
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265519471009107968
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265519409038319616
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265519358937366532
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265519239202562055
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265519170894073857
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265519111469174784
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265518957429170178
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265518953725661185
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265518898620903426
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265518894002909185
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265518850650583040
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265518828320161800
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265518734233538563
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265518709931638784
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265518614800728065
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265518548769738753
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265518460660056066
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265518423397851138
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265518376350343174
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265518272629407747
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265518051535052804
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265517856600571916
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265517831388647426
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265517493864534018
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265517457353121792
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265517307419295745
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265517291766251520
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265517245381386240
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265516947317428226
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265516773765533698
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265516647277899776
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265516638176231424
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265516624356016130
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265516617955454976
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265516524305031171
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265516482965975042
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265516438577700866
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265516080086355971
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265515920459513863
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265515918504931329
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265515794919821313
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265515708680679424
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265515518070587394
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265515502270590976
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265515500588670976
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265515371504766978
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265515327414325248
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265515255687532552
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265515231612145670
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265515209915015168
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265515126188376065
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265515111646670851
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265515072383848449
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265515061721862149
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265515027513118721
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265514979123441664
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265514925855817728
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265514894243385345
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265514872768520194
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM saving tweet with id 1265514762030460928
+05/27/2020 03:58:02 PM writing tweet to database
+05/27/2020 03:58:02 PM exception in extract: 'Status' object has no attribute 'get'
+05/27/2020 03:58:02 PM PARAMS: {'max_id': b'1265514762030460927', 'q': b'@DanielAndrewsMP OR @DanielAndrews OR #DanielAndrews OR DanielAndrewsMP OR #vicpremier ', 'count': b'1000', 'include_entities': b'True', 'tweet_mode': b'extended'}
+05/27/2020 03:58:02 PM Signing request <PreparedRequest [GET]> using client <Client client_key=n4IgjuZTLvAa9WXpJx7W0skch, client_secret=****, resource_owner_key=1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
+05/27/2020 03:58:02 PM Including body in call to sign: False
+05/27/2020 03:58:02 PM Collected params: [('max_id', '1265514762030460927'), ('q', '@DanielAndrewsMP OR @DanielAndrews OR #DanielAndrews OR DanielAndrewsMP OR #vicpremier '), ('count', '1000'), ('include_entities', 'True'), ('tweet_mode', 'extended'), ('oauth_nonce', '86998840712279308911590559082'), ('oauth_timestamp', '1590559082'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'n4IgjuZTLvAa9WXpJx7W0skch'), ('oauth_token', '1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf')]
+05/27/2020 03:58:02 PM Normalized params: count=1000&include_entities=True&max_id=1265514762030460927&oauth_consumer_key=n4IgjuZTLvAa9WXpJx7W0skch&oauth_nonce=86998840712279308911590559082&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1590559082&oauth_token=1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf&oauth_version=1.0&q=%40DanielAndrewsMP%20OR%20%40DanielAndrews%20OR%20%23DanielAndrews%20OR%20DanielAndrewsMP%20OR%20%23vicpremier%20&tweet_mode=extended
+05/27/2020 03:58:02 PM Normalized URI: https://api.twitter.com/1.1/search/tweets.json
+05/27/2020 03:58:02 PM Signing: signature base string: GET&https%3A%2F%2Fapi.twitter.com%2F1.1%2Fsearch%2Ftweets.json&count%3D1000%26include_entities%3DTrue%26max_id%3D1265514762030460927%26oauth_consumer_key%3Dn4IgjuZTLvAa9WXpJx7W0skch%26oauth_nonce%3D86998840712279308911590559082%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1590559082%26oauth_token%3D1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf%26oauth_version%3D1.0%26q%3D%2540DanielAndrewsMP%2520OR%2520%2540DanielAndrews%2520OR%2520%2523DanielAndrews%2520OR%2520DanielAndrewsMP%2520OR%2520%2523vicpremier%2520%26tweet_mode%3Dextended
+05/27/2020 03:58:02 PM Signature: hD2XbsQ9xys8fUjogK/tmxKm7SY=
+05/27/2020 03:58:02 PM Updated url: https://api.twitter.com/1.1/search/tweets.json?max_id=1265514762030460927&q=%40DanielAndrewsMP+OR+%40DanielAndrews+OR+%23DanielAndrews+OR+DanielAndrewsMP+OR+%23vicpremier+&count=1000&include_entities=True&tweet_mode=extended
+05/27/2020 03:58:02 PM Updated headers: {'Host': 'api.twitter.com', 'Cookie': 'guest_id=v1%3A159055908123401828; personalization_id="v1_K81r1sivc51sZRBw0cy3xw=="; lang=en', 'Authorization': 'OAuth oauth_nonce="86998840712279308911590559082", oauth_timestamp="1590559082", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="n4IgjuZTLvAa9WXpJx7W0skch", oauth_token="1254626494682238976-zT4eMwOCrzd9x1SUdq5y4OXSLsfnpf", oauth_signature="hD2XbsQ9xys8fUjogK%2FtmxKm7SY%3D"'}
+05/27/2020 03:58:02 PM Updated body: None
+05/27/2020 03:58:02 PM Starting new HTTPS connection (1): api.twitter.com:443
+05/27/2020 03:58:03 PM https://api.twitter.com:443 "GET /1.1/search/tweets.json?max_id=1265514762030460927&q=%40DanielAndrewsMP+OR+%40DanielAndrews+OR+%23DanielAndrews+OR+DanielAndrewsMP+OR+%23vicpremier+&count=1000&include_entities=True&tweet_mode=extended HTTP/1.1" 200 513617

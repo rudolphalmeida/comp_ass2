@@ -31,10 +31,13 @@ class ToFileListener(StreamListener):
 
     def on_data(self, raw_data):
         logging.info("writing tweet to {}".format(self.file))
-        data = json.loads(raw_data)
-        # Create partition id
-        # data["_id"] = "stream:{}".format(data["id"])
-        if "text" not in data:
+
+        data = None
+        try:
+            raw_tweet = json.loads(raw_data)
+            data = analysis.extract(raw_tweet)
+        except Exception as e:
+            logging.info("exception in parsing tweet: {}".format(e))
             return True
 
         data["sentiment"] = analysis.sentiment(data["text"])
@@ -65,9 +68,14 @@ class CouchDBListener(StreamListener):
 
     def on_data(self, raw_data):
         logging.info("writing tweet to couchdb")
-        data = json.loads(raw_data)
-        # Create partition id
-        # data["_id"] = "stream:{}".format(data["id"])
+        data = None
+        try:
+            raw_tweet = json.loads(raw_data)
+            data = analysis.extract(raw_tweet)
+        except Exception as e:
+            logging.info("exception in parsing tweet: {}".format(e))
+            return True
+
         data["sentiment"] = analysis.sentiment(data["text"])
         self.db.save(data)
 
@@ -93,7 +101,7 @@ if __name__ == "__main__":
         "@PeterGutwein",
         "@ABarrMLA",
         "@fanniebay",
-        "@DanielAndrews",
+        "@DanielAndrewsMP",
         "#AnnastaciaMP",
         "#GladysB",
         "#MarkMcGowanMP",
@@ -101,7 +109,7 @@ if __name__ == "__main__":
         "#PeterGutwein",
         "#ABarrMLA",
         "#fanniebay",
-        "#DanielAndrews",
+        "#DanielAndrewsMP",
         "#Annastacia",
         "#MarkMcGowan",
     ]
