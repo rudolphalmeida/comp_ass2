@@ -73,7 +73,7 @@ class CouchDBListener(StreamListener):
             return True
 
         data["sentiment"] = analysis.sentiment(data["text"])
-        self.db.save(json.dumps(data))
+        self.db.save(json.loads(json.dumps(data)))
 
     def on_error(self, status_code):
         logging.warning("received status code {}".format(status_code))

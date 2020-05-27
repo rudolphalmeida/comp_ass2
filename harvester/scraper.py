@@ -61,7 +61,7 @@ if __name__ == "__main__":
 
             data["sentiment"] = analysis.sentiment(data["text"])
 
-            db.save(json.dumps(data))
+            db.save(json.loads(json.dumps(data)))
             # print(data)
     except error.TweepError as e:  # Should cover RateLimitException
         logging.error("exception in search_results: {}".format(e))
