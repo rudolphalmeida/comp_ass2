@@ -106,20 +106,13 @@ if __name__ == "__main__":
         "#MarkMcGowan",
     ]
 
-    while True:
-        limits = {"RUD": 1, "SAG": 1, "SHE": 1, "SHA": 1, "VIS": 1}
+    user = "RUD"
+    logging.info("scraping with user {}".format(user))
 
-        for user in limits:
-            logging.info("scraping with user {}".format(user))
-
-            stream_tweets(
-                auth=credentials.authenticate(user),
-                listener=ToFileListener(sys.stdout),
-                # listener=ToFileListener(open("tweets.json", "a")),
-                # listener=CouchDBListener("http://admin:password@127.0.0.1:5984/"),
-                track=track,
-            )
-
-            logging.info("rate limit reached for {}".format(user))
-
-        time.sleep(16 * 60)
+    stream_tweets(
+        auth=credentials.authenticate(user),
+        listener=ToFileListener(sys.stdout),
+        # listener=ToFileListener(open("tweets.json", "a")),
+        # listener=CouchDBListener("http://admin:password@127.0.0.1:5984/"),
+        track=track,
+    )
