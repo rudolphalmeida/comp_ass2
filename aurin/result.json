@@ -1,0 +1,42 @@
+{
+    "VIC": {
+        "Labor": 1571635,
+        "Liberal": 1372177,
+        "winner": "Labor"
+    },
+    "NSW": {
+        "Labor": 1867884,
+        "Liberal": 1991442,
+        "winner": "Liberal"
+    },
+    "ACT": {
+        "Labor": 138457,
+        "Liberal": 83732,
+        "winner": "Labor"
+    },
+    "WA": {
+        "Labor": 500464,
+        "Liberal": 613229,
+        "winner": "Liberal"
+    },
+    "NT": {
+        "Labor": 37825,
+        "Liberal": 37506,
+        "winner": "Labor"
+    },
+    "QLD": {
+        "Labor": 961623,
+        "Liberal": 1320777,
+        "winner": "Liberal"
+    },
+    "TAS": {
+        "Labor": 165394,
+        "Liberal": 129032,
+        "winner": "Labor"
+    },
+    "SA": {
+        "Labor": 439742,
+        "Liberal": 418239,
+        "winner": "Labor"
+    }
+}
