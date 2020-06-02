@@ -16,6 +16,18 @@ color: azure;
     font-family: 'Roboto';
     color: black;
 }
+.labor{
+    font-family: 'Roboto';
+    color:red
+}
+.liberal{
+    font-family: 'Roboto';
+    color:#004C99
+}
+.legend{
+    background-color: rgba(255, 255, 255, 0.8);
+    fill-opacity: 0.5;
+}
 .counterTitle{
     font-family: 'Oswald';
     color: whitesmoke;
